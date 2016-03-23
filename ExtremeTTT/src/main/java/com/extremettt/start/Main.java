@@ -18,7 +18,7 @@ public class Main {
         }
         
         if(isMultiplayer == true){
-            
+            MultiplayerGame mGame = new MultiplayerGame();
             System.out.println("two player");
         } else {
 
