@@ -12,5 +12,7 @@ package com.extremettt.logic;
 //The logic for multiplayer game
 public class TwoPlayerGame {
     private char whoseTurn = 'X';
-    
+    public TwoPlayerGame(){
+        
+    }
 }

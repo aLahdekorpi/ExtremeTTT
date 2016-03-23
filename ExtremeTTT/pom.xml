@@ -35,8 +35,21 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.8</version>
+                <configuration>
+                    <targetClasses>
+                        <param>com.extremettt.logic.*</param>
+                        <param>com.extremettt.gui.*</param>
+                        <param>com.extremettt.start.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>com.extremettt.logic.*</param>
+                        <param>com.extremettt.gui.*</param>
+                        <param>com.extremettt.start.*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+    
 
 </project>
