@@ -18,10 +18,10 @@ public class Main {
         }
         
         if(isMultiplayer == true){
-            MultiplayerGame mGame = new MultiplayerGame();
+            TwoPlayerGame mGame = new TwoPlayerGame();
             System.out.println("two player");
         } else {
-
+            SinglePlayerGame sGame = new SinglePlayerGame();
             System.out.println("single player");
         }
     
