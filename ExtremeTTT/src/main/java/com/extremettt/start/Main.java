@@ -8,28 +8,40 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        while(startGame() == false){
-            System.out.println("Not S nor T");
-        }    
-    
+        startGame(singleOrTwo());   
+        
         
         
     }
-    //Starts a game, if correct input.
-    public static boolean startGame(){
+    //Starts a game
+    public static void startGame(String s){
+        if(s.equals("S")){
+            SinglePlayerGame sGame = new SinglePlayerGame();
+            System.out.print("Single decided");
+        } else if(s.equals("T")){
+            TwoPlayerGame tGame = new TwoPlayerGame();
+            System.out.print("Two decided");
+        } else {
+            System.out.print("Problem in parameter");
+        }
+    }
+    //Asks user if single or two, returns S or T
+    public static String singleOrTwo(){
         System.out.println("Single player or Two player game?(S / T)");
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
-        if(string.equals("S")){
-            SinglePlayerGame sGame = new SinglePlayerGame();
-            System.out.println("single player");
-            return true;
-        } else if (string.equals("T")){
-            TwoPlayerGame mGame = new TwoPlayerGame();
-            System.out.println("two player");
-            return true;
+        while (!string.equals("S") || !string.equals("T")){
+            if(string.equals("S")){
+                return "S";
+            } else if (string.equals("T")){
+                return "T";    
+            }
+            else{
+                System.out.println("not S nor T");
+                string = scanner.nextLine();
+            }
         }
-    return false;
+        return "meme";
     }
 }
 

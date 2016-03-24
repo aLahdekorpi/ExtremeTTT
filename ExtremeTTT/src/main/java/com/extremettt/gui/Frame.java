@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 package com.extremettt.gui;
-
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
 
 /**
  *
  * @author lalex
  */
 
-public class Frame extends JFrame
-{
-
+public class Frame extends JFrame {
+    //create the grid
+    private Cell[][] cells = new Cell[3][3];
+    
+    private char whoseTurn = 'X';
     
 }
