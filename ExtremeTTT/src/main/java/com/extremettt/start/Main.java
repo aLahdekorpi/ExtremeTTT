@@ -2,15 +2,11 @@
 package com.extremettt.start;
 import com.extremettt.logic.SinglePlayerGame;
 import com.extremettt.logic.TwoPlayerGame;
-
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         startGame(singleOrTwo());   
-        
-        
         
     }
     //Starts a game
