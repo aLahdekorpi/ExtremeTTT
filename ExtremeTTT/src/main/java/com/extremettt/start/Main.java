@@ -8,29 +8,28 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        startGame();
+        while(startGame() == false){
+            System.out.println("Not S nor T");
+        }    
     
         
         
     }
-    //Starts a game.
-    public static void startGame(){
+    //Starts a game, if correct input.
+    public static boolean startGame(){
         System.out.println("Single player or Two player game?(S / T)");
-        boolean isMultiplayer = true;
-        Scanner s = new Scanner(System.in);
-        String c = s.nextLine();
-        if(c.equals("S")){
-            isMultiplayer = false;
-        }
-        
-        if(isMultiplayer == true){
-            TwoPlayerGame mGame = new TwoPlayerGame();
-            System.out.println("two player");
-        } else {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        if(string.equals("S")){
             SinglePlayerGame sGame = new SinglePlayerGame();
             System.out.println("single player");
+            return true;
+        } else if (string.equals("T")){
+            TwoPlayerGame mGame = new TwoPlayerGame();
+            System.out.println("two player");
+            return true;
         }
+    return false;
     }
-    
-    
 }
+
