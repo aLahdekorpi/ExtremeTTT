@@ -1,6 +1,0 @@
-#surefire
-#Thu Mar 24 11:29:13 EET 2016
-maven.ext.class.path=/usr/share/tmcbeans/java/maven-nblib/netbeans-eventspy.jar
-user.dir=/home/lalex/ExtremeTTT/ExtremeTTT
-localRepository=/home/lalex/.m2/repository
-basedir=/home/lalex/ExtremeTTT/ExtremeTTT

@@ -37,7 +37,7 @@ public class Main {
                 string = scanner.nextLine();
             }
         }
-        return "meme";
+        return "Well something went horribly wrong";
     }
 }
 
