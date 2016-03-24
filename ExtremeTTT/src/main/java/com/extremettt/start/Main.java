@@ -12,11 +12,11 @@ public class Main {
     //Starts a game
     public static void startGame(String s){
         if(s.equals("S")){
-            SinglePlayerGame sGame = new SinglePlayerGame();
             System.out.print("Single decided");
+            SinglePlayerGame sGame = new SinglePlayerGame();
         } else if(s.equals("T")){
-            TwoPlayerGame tGame = new TwoPlayerGame();
             System.out.print("Two decided");
+            TwoPlayerGame tGame = new TwoPlayerGame();
         } else {
             System.out.print("Problem in parameter");
         }
@@ -37,7 +37,7 @@ public class Main {
                 string = scanner.nextLine();
             }
         }
-        return "Well something went horribly wrong";
+        return "Well something went wrong";
     }
 }
 
