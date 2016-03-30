@@ -20,8 +20,22 @@ public class SinglePlayerGame {
     
     }   
 
+    public void setWhoseTurn(char whoseTurn) {
+        if (whoseTurn == 'X' || whoseTurn == 'Y'){
+            this.whoseTurn = whoseTurn;
+        }
+    }
+
     public char getWhoseTurn() {
         return whoseTurn;
     }
+    public void swapTurns(){
+        if (this.whoseTurn == 'X'){
+            this.whoseTurn = 'Y'; 
+        } else {
+            this.whoseTurn = 'X';
+        }
+    }
+    
 
 }
