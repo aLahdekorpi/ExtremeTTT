@@ -17,5 +17,7 @@ public class Frame extends JFrame {
     private Cell[][] cells = new Cell[3][3];
     
     private char whoseTurn = 'X';
-    
+    public Frame(){
+        
+    }
 }

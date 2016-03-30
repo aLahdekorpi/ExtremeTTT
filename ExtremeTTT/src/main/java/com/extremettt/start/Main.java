@@ -1,4 +1,3 @@
-
 package com.extremettt.start;
 import com.extremettt.logic.SinglePlayerGame;
 import com.extremettt.logic.TwoPlayerGame;
@@ -6,9 +5,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        startGame(singleOrTwo());   
-        
+        startGame(singleOrTwo());           
     }
+    
     //Starts a game
     public static void startGame(String s){
         if(s.equals("S")){
@@ -21,6 +20,7 @@ public class Main {
             System.out.print("Problem in parameter");
         }
     }
+    
     //Asks user if single or two, returns S or T
     public static String singleOrTwo(){
         System.out.println("Single player or Two player game?(S / T)");

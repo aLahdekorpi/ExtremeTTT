@@ -5,6 +5,8 @@
  */
 package com.extremettt.logic;
 
+import com.extremettt.gui.Frame;
+
 /**
  *
  * @author lalex
@@ -12,4 +14,14 @@ package com.extremettt.logic;
 //logic for single player
 public class SinglePlayerGame {
     private char whoseTurn = 'X';
+    private Frame frame;
+    public SinglePlayerGame(){
+    frame = new Frame();
+    
+    }   
+
+    public char getWhoseTurn() {
+        return whoseTurn;
+    }
+
 }
