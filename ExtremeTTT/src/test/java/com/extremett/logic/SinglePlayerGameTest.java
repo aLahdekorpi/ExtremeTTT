@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.extremett.gui;
+package com.extremett.logic;
 
 import com.extremettt.logic.SinglePlayerGame;
 import org.junit.After;
