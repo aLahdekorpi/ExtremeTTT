@@ -18,64 +18,72 @@ import static org.junit.Assert.*;
  * @author lalex
  */
 public class SinglePlayerGameTest {
+
     SinglePlayerGame game;
+
     public SinglePlayerGameTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
-        
+
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         game = new SinglePlayerGame();
     }
-    
+
     @After
     public void tearDown() {
     }
+
     @Test
-    public void whoseTurnIsCorrectAtStart(){
-        assertEquals(game.getWhoseTurn(),'X');
+    public void whoseTurnIsCorrectAtStart() {
+        assertEquals(game.getWhoseTurn(), 'X');
     }
+
     @Test
-    public void setterWorksWithY(){
+    public void setterWorksWithY() {
         game.setWhoseTurn('Y');
-        assertEquals(game.getWhoseTurn(),'Y');
+        assertEquals(game.getWhoseTurn(), 'Y');
     }
+
     @Test
-    public void setterWorksWithX(){
+    public void setterWorksWithX() {
         game.setWhoseTurn('X');
-        assertEquals(game.getWhoseTurn(),'X');
+        assertEquals(game.getWhoseTurn(), 'X');
     }
+
     @Test
-    public void setterWorksWithRandomChars(){
+    public void setterWorksWithRandomChars() {
         game.setWhoseTurn('A');
         game.setWhoseTurn('y');
         game.setWhoseTurn('x');
         game.setWhoseTurn('4');
         game.setWhoseTurn('!');
         game.setWhoseTurn(' ');
-        
-        assertEquals(game.getWhoseTurn(),'X');
+
+        assertEquals(game.getWhoseTurn(), 'X');
     }
+
     @Test
-    public void swapTurnsWorksWhenX(){
+    public void swapTurnsWorksWhenX() {
         game.setWhoseTurn('X');
         game.swapTurns();
-        assertEquals(game.getWhoseTurn(),'Y'); 
+        assertEquals(game.getWhoseTurn(), 'Y');
     }
+
     @Test
-    public void swapTurnsWorksWhenY(){
+    public void swapTurnsWorksWhenY() {
         game.setWhoseTurn('Y');
         game.swapTurns();
-        assertEquals(game.getWhoseTurn(),'X');
-                
+        assertEquals(game.getWhoseTurn(), 'X');
+
     }
 
     // TODO add test methods here.

@@ -9,16 +9,18 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import com.extremettt.gui.MyMouseListener;
+
 /**
  *
  * @author lalex
  */
 //panel which holds the tokens
 public class Cell extends JPanel {
-    
+
     private char token = ' ';
-    public Cell(){
-        setBorder(new LineBorder(Color.BLACK,1));
+
+    public Cell() {
+        setBorder(new LineBorder(Color.BLACK, 1));
         addMouseListener(new MyMouseListener(true));
     }
 
@@ -30,10 +32,10 @@ public class Cell extends JPanel {
         this.token = token;
         repaint();
     }
+
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
     }
-    
-}
 
+}

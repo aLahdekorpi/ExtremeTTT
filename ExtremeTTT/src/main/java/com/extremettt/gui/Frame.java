@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.extremettt.gui;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -11,13 +12,14 @@ import javax.swing.*;
  *
  * @author lalex
  */
-
 public class Frame extends JFrame {
+
     //create the grid
     private Cell[][] cells = new Cell[3][3];
-    
+
     private char whoseTurn = 'X';
-    public Frame(){
-        
+
+    public Frame() {
+
     }
 }

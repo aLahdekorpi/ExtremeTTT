@@ -5,7 +5,6 @@
  */
 package com.extremettt.gui;
 
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -14,15 +13,19 @@ import java.awt.event.MouseEvent;
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {
+
     private boolean isMultiplayer;
-    public MyMouseListener(boolean isMultiplayer){
+
+    public MyMouseListener(boolean isMultiplayer) {
         this.isMultiplayer = isMultiplayer;
     }
-    @Override 
-    public void mouseClicked(MouseEvent e){
-        
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
     }
-    public boolean getIfMultiplayer(){
+
+    public boolean getIfMultiplayer() {
         return this.isMultiplayer;
     }
 }
