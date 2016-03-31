@@ -7,3 +7,6 @@ Riippuen ajasta näiden ominaisuuksen ollessa valmiita, saatetaan toiminnallisuu
 ###Toiminnot
 - yksinpeli(Extreme)
 - mahdollinen kaksinpeli
+
+###Luokkakaavio
+![Kaavio](/dokumentaatio/luokkakaavio.png)
