@@ -1,5 +1,7 @@
 Ohjelma ExtremeTTT on ristinolla-peli, jossa voi pelata kaksinpeliä, tai extreme-yksinpeliä.
 
-[aiheen kuvaus](dokumentaatio/aiheenKuvausJaMääritelmä.md)
+[Aiheen kuvaus](dokumentaatio/aiheenKuvausJaMääritelmä.md)
 
-[tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+
+[Luokkakaavio](dokumentaatio/luokkakaavio.png)
