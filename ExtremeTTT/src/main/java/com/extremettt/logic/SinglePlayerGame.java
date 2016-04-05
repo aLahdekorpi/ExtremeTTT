@@ -19,7 +19,6 @@ public class SinglePlayerGame {
 
     public SinglePlayerGame() {
         frame = new Frame();
-
     }
 
     public void setWhoseTurn(char whoseTurn) {

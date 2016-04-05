@@ -13,7 +13,6 @@ import java.awt.event.MouseEvent;
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {
-
     private boolean isMultiplayer;
 
     public MyMouseListener(boolean isMultiplayer) {
@@ -22,7 +21,7 @@ public class MyMouseListener extends MouseAdapter {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        
     }
 
     public boolean getIfMultiplayer() {
