@@ -5,18 +5,24 @@
  */
 package com.extremettt.logic;
 
+import com.extremettt.gui.Cell;
+import com.extremettt.gui.Frame;
+
 /**
  *
  * @author lalex
  */
 //The logic for multiplayer game
 public class TwoPlayerGame {
-
+    private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
+    
     public TwoPlayerGame() {
-      
+      frame = new Frame();
+      Cell[][] cells = frame.getCells();
     }
+    
     //checks if board is full
     public boolean isFull(){
         for (int i = 0; i<3; i++){
@@ -28,6 +34,7 @@ public class TwoPlayerGame {
         }
         return true;
     }
+    
     //checks if game is won by 3 in a row
     public boolean isWonRows(char token){
         for (int i = 0; i < 3; i++){
@@ -40,6 +47,7 @@ public class TwoPlayerGame {
         }
         return false;
     }
+    
     //checks if game is won by 3 in a column
     public boolean isWonColumns(char token){
         for (int j = 0; j<3;j++){
@@ -52,6 +60,8 @@ public class TwoPlayerGame {
         }
         return false;
     }
+    
+    //checks if game is won by 3 diagonally
     public boolean isWonDiagonal(char token){
         if ((cells[0][0].getToken() == token)
             && (cells[1][1].getToken() == token)
@@ -68,11 +78,13 @@ public class TwoPlayerGame {
            }
        return false;
     }
+    
+    //checks every victory possibility
     public boolean isWon(char token){
         if(isWonRows(token) || isWonColumns(token) || isWonDiagonal(token)){
             return true;
         }
         return false;
     }
-    }
 }
+
