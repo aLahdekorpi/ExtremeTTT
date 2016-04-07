@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.extremettt.gui;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 

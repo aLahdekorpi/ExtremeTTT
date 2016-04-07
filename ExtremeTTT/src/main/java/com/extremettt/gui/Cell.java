@@ -8,8 +8,6 @@ package com.extremettt.gui;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import com.extremettt.gui.MyMouseListener;
-
 /**
  *
  * @author lalex
