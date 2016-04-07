@@ -16,15 +16,8 @@ import javax.swing.border.LineBorder;
 public class Frame extends JFrame {
 
     //create the grid
-    private Cell[][] cells = new Cell[3][3];
+    private Cell[][] cells = new Cell[3][3];;
 
-    public Cell[][] getCells() {
-        return cells;
-    }
-
-    public char getWhoseTurn() {
-        return whoseTurn;
-    }
     JLabel jlblStatus = new JLabel("X's turn to play");
     private char whoseTurn = 'X';
 
@@ -40,6 +33,13 @@ public class Frame extends JFrame {
  
         add(panel, BorderLayout.CENTER);
         add(jlblStatus, BorderLayout.SOUTH);
+    }
+    public Cell[][] getCells() {
+        return cells;
+    }
+
+    public char getWhoseTurn() {
+        return whoseTurn;
     }
     
 }

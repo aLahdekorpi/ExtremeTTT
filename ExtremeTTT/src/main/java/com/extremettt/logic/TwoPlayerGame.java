@@ -21,12 +21,13 @@ public class TwoPlayerGame {
     public TwoPlayerGame() {
       frame = new Frame();
       Cell[][] cells = frame.getCells();
+      
     }
     
     //checks if board is full
     public boolean isFull(){
-        for (int i = 0; i<3; i++){
-            for (int j = 0; j<3;j++){
+        for (int i = 0; i < 3 ; i++){
+            for (int j = 0; j < 3 ;j++){
                 if(cells[i][j].getToken() == ' '){
                     return false;
                 }
@@ -46,6 +47,14 @@ public class TwoPlayerGame {
            }
         }
         return false;
+    }
+
+    public Cell[][] getCells() {
+        return cells;
+    }
+
+    public Frame getFrame() {
+        return frame;
     }
     
     //checks if game is won by 3 in a column
@@ -85,6 +94,24 @@ public class TwoPlayerGame {
             return true;
         }
         return false;
+    }
+    //setter for whoseturn
+    public void setWhoseTurn(char whoseTurn) {
+        if (whoseTurn == 'X' || whoseTurn == 'Y') {
+            this.whoseTurn = whoseTurn;
+        }
+    }
+    //getter for whoseturn
+    public char getWhoseTurn() {
+        return whoseTurn;
+    }
+    //swaps turn
+    public void swapTurns() {
+        if (this.whoseTurn == 'X') {
+            this.whoseTurn = 'Y';
+        } else {
+            this.whoseTurn = 'X';
+        }
     }
 }
 

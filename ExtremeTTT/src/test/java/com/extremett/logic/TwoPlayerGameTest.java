@@ -5,22 +5,25 @@
  */
 package com.extremett.logic;
 
-import com.extremettt.logic.SinglePlayerGame;
+import com.extremettt.gui.Cell;
+import com.extremettt.logic.TwoPlayerGame;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
 /**
  *
  * @author lalex
  */
-public class SinglePlayerGameTest {
+public class TwoPlayerGameTest {
 
-    SinglePlayerGame game;
+    private TwoPlayerGame game;
+    private Cell[][] cells;
 
-    public SinglePlayerGameTest() {
+    public TwoPlayerGameTest() {
     }
 
     @BeforeClass
@@ -34,11 +37,17 @@ public class SinglePlayerGameTest {
 
     @Before
     public void setUp() {
-        game = new SinglePlayerGame();
+        game = new TwoPlayerGame();
+        cells = game.getFrame().getCells();
     }
 
     @After
     public void tearDown() {
+    }
+
+    @Test
+    public void isFullWorksWhenNotFull() {
+        assertFalse(game.isFull());
     }
 
     @Test
@@ -67,21 +76,21 @@ public class SinglePlayerGameTest {
         game.setWhoseTurn('!');
         game.setWhoseTurn(' ');
 
-        assertEquals(game.getWhoseTurn(), 'X');
+        assertEquals('X', game.getWhoseTurn());
     }
 
     @Test
     public void swapTurnsWorksWhenX() {
         game.setWhoseTurn('X');
         game.swapTurns();
-        assertEquals(game.getWhoseTurn(), 'Y');
+        assertEquals('Y', game.getWhoseTurn());
     }
 
     @Test
     public void swapTurnsWorksWhenY() {
         game.setWhoseTurn('Y');
         game.swapTurns();
-        assertEquals(game.getWhoseTurn(), 'X');
+        assertEquals('X', game.getWhoseTurn());
 
     }
 

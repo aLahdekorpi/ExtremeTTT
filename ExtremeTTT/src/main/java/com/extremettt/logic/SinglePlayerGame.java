@@ -11,7 +11,7 @@ import com.extremettt.gui.Frame;
  * @author lalex
  */
 //logic for single player
-public class SinglePlayerGame {
+public class SinglePlayerGame extends TwoPlayerGame {
 
     private char whoseTurn = 'X';
     private Frame frame;
@@ -19,23 +19,6 @@ public class SinglePlayerGame {
     public SinglePlayerGame() {
         frame = new Frame();
     }
-
-    public void setWhoseTurn(char whoseTurn) {
-        if (whoseTurn == 'X' || whoseTurn == 'Y') {
-            this.whoseTurn = whoseTurn;
-        }
-    }
-
-    public char getWhoseTurn() {
-        return whoseTurn;
-    }
-
-    public void swapTurns() {
-        if (this.whoseTurn == 'X') {
-            this.whoseTurn = 'Y';
-        } else {
-            this.whoseTurn = 'X';
-        }
-    }
-
 }
+
+    

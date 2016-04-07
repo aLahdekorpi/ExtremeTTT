@@ -8,6 +8,7 @@ package com.extremettt.gui;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+
 /**
  *
  * @author lalex
@@ -34,6 +35,12 @@ public class Cell extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-    }
 
+        if (token == 'X') {
+            g.drawLine(10, 10, getWidth() - 10, getHeight() - 10);
+            g.drawLine(getWidth() - 10, 10, 10, getHeight() - 10);
+        } else if (token == 'O') {
+            g.drawOval(10, 10, getWidth() - 20, getHeight() - 20);
+        }
+    }
 }
