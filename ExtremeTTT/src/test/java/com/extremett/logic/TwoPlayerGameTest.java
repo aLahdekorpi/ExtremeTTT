@@ -199,6 +199,30 @@ public class TwoPlayerGameTest {
         this.cells[2][2].setToken('X');
         assertTrue(game.isWon('X'));
     }
+    @Test
+    public void isFullFalseWhenWrongParameter(){
+        for (int i = 0; i < 3 ; i++){
+            for (int j = 0; j < 3 ;j++){
+                this.cells[i][j].setToken('K');
+            }
+        }
+        assertFalse(game.isFull());
+    }
+    @Test
+    public void isWonFalseWhenWrongParameter(){
+        for (int i = 0; i < 3 ; i++){
+            for (int j = 0; j < 3 ;j++){
+                this.cells[i][j].setToken('P');
+            }
+        }
+        assertFalse(game.isWon('X'));
+        assertFalse(game.isWon('P'));
+        assertFalse(game.isWon('Y'));        
+    }
+    @Test
+    public void isWonFalseWhenEmptyAndTokenEmpty(){
+        assertFalse(game.isWon(' '));
+    }
     
     @Test
     public void whoseTurnIsCorrectAtStart() {

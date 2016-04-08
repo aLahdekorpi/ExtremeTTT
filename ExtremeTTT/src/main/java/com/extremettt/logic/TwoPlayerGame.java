@@ -38,6 +38,9 @@ public class TwoPlayerGame {
     
     //checks if game is won by 3 in a row
     public boolean isWonRows(char token){
+        if (!(token == 'Y' || token == 'X')){
+           return false;
+        }
         for (int i = 0; i < 3; i++){
            if ((this.cells[i][0].getToken() == token)
                    && (this.cells[i][1].getToken() == token)
@@ -59,6 +62,9 @@ public class TwoPlayerGame {
     
     //checks if game is won by 3 in a column
     public boolean isWonColumns(char token){
+        if (!(token == 'Y' || token == 'X')){
+           return false;
+        }
         for (int j = 0; j<3;j++){
             if ((this.cells[0][j].getToken() == token)
                && (this.cells[1][j].getToken() == token)
@@ -72,6 +78,9 @@ public class TwoPlayerGame {
     
     //checks if game is won by 3 diagonally
     public boolean isWonDiagonal(char token){
+        if (!(token == 'Y' || token == 'X')){
+           return false;
+        }
         if ((this.cells[0][0].getToken() == token)
             && (this.cells[1][1].getToken() == token)
             && (this.cells[2][2].getToken() == token))
@@ -90,6 +99,9 @@ public class TwoPlayerGame {
     
     //checks every victory possibility
     public boolean isWon(char token){
+        if (!(token == 'Y' || token == 'X')){
+           return false;
+        }
         if(isWonRows(token) || isWonColumns(token) || isWonDiagonal(token)){
             return true;
         }

@@ -28,7 +28,7 @@ public class Cell extends JPanel {
     }
 
     public void setToken(char token) {
-        if(this.token == ' '){
+        if(this.token == ' ' && (token == 'X' || token == 'Y' )){
             this.token = token;
             repaint();
         }
