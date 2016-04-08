@@ -14,40 +14,40 @@ import com.extremettt.gui.Frame;
  */
 //The logic for multiplayer game
 public class TwoPlayerGame {
+
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
-    
+
     public TwoPlayerGame() {
-      this.frame = new Frame();
-      this.cells = frame.getCells();
-      
+        this.frame = new Frame();
+        this.cells = frame.getCells();
+
     }
-    
+
     //checks if board is full
-    public boolean isFull(){
-        for (int i = 0; i < 3 ; i++){
-            for (int j = 0; j < 3 ;j++){
-                if(this.cells[i][j].getToken() == ' '){
+    public boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (this.cells[i][j].getToken() == ' ') {
                     return false;
                 }
             }
         }
         return true;
     }
-    
+
     //checks if game is won by 3 in a row
-    public boolean isWonRows(char token){
-        if (!(token == 'Y' || token == 'X')){
-           return false;
+    public boolean isWonRows(char token) {
+        if (!(token == 'Y' || token == 'X')) {
+            return false;
         }
-        for (int i = 0; i < 3; i++){
-           if ((this.cells[i][0].getToken() == token)
-                   && (this.cells[i][1].getToken() == token)
-                   && (this.cells[i][2].getToken() == token))
-           {
-               return true;
-           }
+        for (int i = 0; i < 3; i++) {
+            if ((this.cells[i][0].getToken() == token)
+                    && (this.cells[i][1].getToken() == token)
+                    && (this.cells[i][2].getToken() == token)) {
+                return true;
+            }
         }
         return false;
     }
@@ -59,64 +59,64 @@ public class TwoPlayerGame {
     public Frame getFrame() {
         return frame;
     }
-    
+
     //checks if game is won by 3 in a column
-    public boolean isWonColumns(char token){
-        if (!(token == 'Y' || token == 'X')){
-           return false;
+    public boolean isWonColumns(char token) {
+        if (!(token == 'Y' || token == 'X')) {
+            return false;
         }
-        for (int j = 0; j<3;j++){
+        for (int j = 0; j < 3; j++) {
             if ((this.cells[0][j].getToken() == token)
-               && (this.cells[1][j].getToken() == token)
-               && (this.cells[2][j].getToken() == token))
-           {
-               return true;
-           }
+                    && (this.cells[1][j].getToken() == token)
+                    && (this.cells[2][j].getToken() == token)) {
+                return true;
+            }
         }
         return false;
     }
-    
+
     //checks if game is won by 3 diagonally
-    public boolean isWonDiagonal(char token){
-        if (!(token == 'Y' || token == 'X')){
-           return false;
+    public boolean isWonDiagonal(char token) {
+        if (!(token == 'Y' || token == 'X')) {
+            return false;
         }
         if ((this.cells[0][0].getToken() == token)
-            && (this.cells[1][1].getToken() == token)
-            && (this.cells[2][2].getToken() == token))
-           {
-               return true;
-           }
- 
-       if ((this.cells[0][2].getToken() == token)
-               && (this.cells[1][1].getToken() == token)
-               && (this.cells[2][0].getToken() == token))
-           {
-               return true;
-           }
-       return false;
-    }
-    
-    //checks every victory possibility
-    public boolean isWon(char token){
-        if (!(token == 'Y' || token == 'X')){
-           return false;
+                && (this.cells[1][1].getToken() == token)
+                && (this.cells[2][2].getToken() == token)) {
+            return true;
         }
-        if(isWonRows(token) || isWonColumns(token) || isWonDiagonal(token)){
+
+        if ((this.cells[0][2].getToken() == token)
+                && (this.cells[1][1].getToken() == token)
+                && (this.cells[2][0].getToken() == token)) {
             return true;
         }
         return false;
     }
+
+    //checks every victory possibility
+    public boolean isWon(char token) {
+        if (!(token == 'Y' || token == 'X')) {
+            return false;
+        }
+        if (isWonRows(token) || isWonColumns(token) || isWonDiagonal(token)) {
+            return true;
+        }
+        return false;
+    }
+
     //setter for whoseturn
     public void setWhoseTurn(char whoseTurn) {
         if (whoseTurn == 'X' || whoseTurn == 'Y') {
             this.whoseTurn = whoseTurn;
         }
     }
+
     //getter for whoseturn
     public char getWhoseTurn() {
         return whoseTurn;
     }
+
     //swaps turn
     public void swapTurns() {
         if (this.whoseTurn == 'X') {
@@ -126,4 +126,3 @@ public class TwoPlayerGame {
         }
     }
 }
-

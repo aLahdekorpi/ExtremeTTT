@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.extremettt.logic;
+
 import com.extremettt.gui.Frame;
 
 /**
@@ -20,5 +21,3 @@ public class SinglePlayerGame extends TwoPlayerGame {
         frame = new Frame();
     }
 }
-
-    
