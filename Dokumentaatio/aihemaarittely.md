@@ -9,4 +9,4 @@ Riippuen ajasta näiden ominaisuuksen ollessa valmiita, saatetaan toiminnallisuu
 - mahdollinen kaksinpeli
 
 ###Luokkakaavio
-![Kaavio](/dokumentaatio/luokkakaavio.png)
+![Kaavio](/Dokumentaatio/luokkakaavio.png)
