@@ -28,8 +28,10 @@ public class Cell extends JPanel {
     }
 
     public void setToken(char token) {
-        this.token = token;
-        repaint();
+        if(this.token == ' '){
+            this.token = token;
+            repaint();
+        }
     }
 
     @Override

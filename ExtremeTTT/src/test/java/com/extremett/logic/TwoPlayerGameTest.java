@@ -44,12 +44,162 @@ public class TwoPlayerGameTest {
     @After
     public void tearDown() {
     }
-
     @Test
-    public void isFullWorksWhenNotFull() {
+    public void isFullTrueWhenFull(){
+        for (int i = 0; i < 3 ; i++){
+            for (int j = 0; j < 3 ;j++){
+                this.cells[i][j].setToken('X');
+            }
+        }
+        assertTrue(game.isFull());
+    }
+    
+    @Test
+    public void isFullFalseWhenEmpty() {
         assertFalse(game.isFull());
     }
-
+    @Test
+    public void isFullWorksFalseThreeTokens(){
+        this.cells[0][0].setToken('X');
+        this.cells[0][1].setToken('O');
+        this.cells[0][2].setToken('X');
+        assertFalse(game.isFull());
+    }
+    @Test
+    public void isWonRowsTrueFirstRow(){
+        this.cells[0][0].setToken('X');
+        this.cells[0][1].setToken('X');
+        this.cells[0][2].setToken('X');
+        assertTrue(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonRowsTrueSecondRow(){
+        this.cells[1][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[1][2].setToken('X');
+        assertTrue(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonRowsTrueThirdRow(){
+        this.cells[2][0].setToken('X');
+        this.cells[2][1].setToken('X');
+        this.cells[2][2].setToken('X');
+        assertTrue(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonRowsFalseWithEmpty(){
+        assertFalse(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonRowsFalseWithTwoPerRow(){
+        this.cells[0][0].setToken('X');
+        this.cells[0][1].setToken('X');
+        this.cells[1][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][0].setToken('X');
+        this.cells[2][1].setToken('X');
+        assertFalse(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonRowsFalseWithOnePerRow(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][0].setToken('X');
+        this.cells[2][0].setToken('X');
+        assertFalse(game.isWonRows('X'));
+    }
+    @Test
+    public void isWonColumnsTrueFirstColumn(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][0].setToken('X');
+        this.cells[2][0].setToken('X');
+        assertTrue(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonColumnsTrueSecondColumn(){
+        this.cells[0][1].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][1].setToken('X');
+        assertTrue(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonColumnsTrueThirdColumn(){
+        this.cells[0][2].setToken('X');
+        this.cells[1][2].setToken('X');
+        this.cells[2][2].setToken('X');
+        assertTrue(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonColumnsFalseWhenEmpty(){
+        assertFalse(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonColumnsFalseTwoPerColumn(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][0].setToken('X');
+        this.cells[2][1].setToken('X');
+        this.cells[0][1].setToken('X');
+        this.cells[1][2].setToken('X');
+        this.cells[2][2].setToken('X');
+        assertFalse(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonColumnsFalseOnePerColumn(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[0][2].setToken('X');
+        assertFalse(game.isWonColumns('X'));
+    }
+    @Test
+    public void isWonDiagonalFalseWhenEmpty(){
+        assertFalse(game.isWonDiagonal('X'));
+    }
+    @Test
+    public void isWonDiagonalTrueFromLeftUpToRightDown(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][2].setToken('X');
+        assertTrue(game.isWonDiagonal('X'));
+    }
+    @Test
+    public void isWonDiagonalTrueFromLeftDownToRightUp(){
+        this.cells[0][2].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][0].setToken('X');
+        assertTrue(game.isWonDiagonal('X'));
+    }
+    @Test
+    public void isWonDiagonalFalseCornerAndMiddle(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][0].setToken('X');
+        assertFalse(game.isWonDiagonal('X'));
+    }
+    @Test
+    public void isWonFalseWhenAllFalse(){
+        assertFalse(game.isWon('X'));
+    }
+    @Test
+    public void isWonTrueWhenRowsTrue(){
+        this.cells[0][0].setToken('X');
+        this.cells[0][1].setToken('X');
+        this.cells[0][2].setToken('X');
+        assertTrue(game.isWon('X'));
+    }
+    @Test
+    public void isWonTrueWhenColumnsTrue(){
+        this.cells[1][0].setToken('X');
+        this.cells[2][0].setToken('X');
+        this.cells[0][0].setToken('X');
+        assertTrue(game.isWon('X'));
+    }
+    @Test
+    public void isWonTrueWhenDiagonalTrue(){
+        this.cells[0][0].setToken('X');
+        this.cells[1][1].setToken('X');
+        this.cells[2][2].setToken('X');
+        assertTrue(game.isWon('X'));
+    }
+    
     @Test
     public void whoseTurnIsCorrectAtStart() {
         assertEquals(game.getWhoseTurn(), 'X');
