@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.extremett.logic;
+package com.extremettt.logic;
 
-import com.extremettt.logic.TwoPlayerGame;
 import com.extremettt.gui.Cell;
 
 import org.junit.After;

@@ -50,6 +50,23 @@ public class CellTest {
         cell.setToken('!');
         cell.setToken('5');
         assertEquals(cell.getToken(), 'Y');
+        
+    }
+    @Test
+    public void setterWorksWithRightParameter(){
+        cell.setToken('X');
+        cell.setToken('x');
+        cell.setToken('y');
+        cell.setToken('!');
+        assertEquals(cell.getToken(), 'X');
+    }
+    @Test
+    public void setterWorksIfTokenAlready(){
+        cell.setToken('X');
+        cell.setToken('Y');
+        cell.setToken('Y');
+        cell.setToken(' ');
+        assertEquals(cell.getToken(), 'X');
     }
 
     // TODO add test methods here.

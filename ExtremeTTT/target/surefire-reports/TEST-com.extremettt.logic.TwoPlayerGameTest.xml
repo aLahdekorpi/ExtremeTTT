@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.extremettt.start.MainTest" time="0.008" errors="0" skipped="0">
+<testsuite tests="35" failures="0" name="com.extremettt.logic.TwoPlayerGameTest" time="0.292" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -62,8 +62,39 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.extremettt.start.MainTest" name="startGameDoesntWorkWithRandomString" time="0.001"/>
-  <testcase classname="com.extremettt.start.MainTest" name="startGameDoesntWorkWithEmpty" time="0"/>
-  <testcase classname="com.extremettt.start.MainTest" name="startGameWorksWithS" time="0.003"/>
-  <testcase classname="com.extremettt.start.MainTest" name="startGameWorksWithT" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="setterWorksWithRandomChars" time="0.137"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="whoseTurnIsCorrectAtStart" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsFalseWhenEmpty" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonTrueWhenRowsTrue" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="swapTurnsWorksWhenX" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="swapTurnsWorksWhenY" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsTrueThirdRow" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsTrueFirstColumn" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullFalseOneToken" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsFalseWithOnePerRow" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsFalseWrongParameter" time="0.003"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonFalseWhenAllFalse" time="0"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonDiagonalTrueFromLeftDownToRightUp" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsTrueThirdColumn" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullFalseWhenEmpty" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonDiagonalFalseWhenEmpty" time="0.004"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullTrueWhenFull" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="setterWorksWithX" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="setterWorksWithY" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonDiagonalTrueFromLeftUpToRightDown" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullFalseEightTokens" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsTrueSecondColumn" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonFalseWhenEmptyAndTokenEmpty" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsFalseTwoPerColumn" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonDiagonalFalseCornerAndMiddle" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullWorksFalseThreeTokens" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonTrueWhenDiagonalTrue" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isFullFalseWhenWrongParameter" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonTrueWhenColumnsTrue" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonFalseWhenWrongParameter" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonColumnsFalseOnePerColumn" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsTrueFirstRow" time="0.002"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsFalseWithTwoPerRow" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsFalseWithEmpty" time="0.001"/>
+  <testcase classname="com.extremettt.logic.TwoPlayerGameTest" name="isWonRowsTrueSecondRow" time="0.002"/>
 </testsuite>
