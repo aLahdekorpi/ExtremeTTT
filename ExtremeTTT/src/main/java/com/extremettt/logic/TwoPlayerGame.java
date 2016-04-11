@@ -29,20 +29,19 @@ public class TwoPlayerGame {
     public boolean isFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (this.cells[i][j].getToken() == ' ') {
+                if (this.cells[i][j].getToken() == ' '){
                     return false;
                 }
             }
         }
         return true;
     }
-
     //checks if game is won by 3 in a row
     public boolean isWonRows(char token) {
         if (!(token == 'Y' || token == 'X')) {
             return false;
         }
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i <= 2; i++) {
             if ((this.cells[i][0].getToken() == token)
                     && (this.cells[i][1].getToken() == token)
                     && (this.cells[i][2].getToken() == token)) {
@@ -65,7 +64,7 @@ public class TwoPlayerGame {
         if (!(token == 'Y' || token == 'X')) {
             return false;
         }
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j <= 2; j++) {
             if ((this.cells[0][j].getToken() == token)
                     && (this.cells[1][j].getToken() == token)
                     && (this.cells[2][j].getToken() == token)) {

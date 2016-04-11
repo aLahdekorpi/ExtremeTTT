@@ -5,8 +5,9 @@
  */
 package com.extremett.logic;
 
-import com.extremettt.gui.Cell;
 import com.extremettt.logic.TwoPlayerGame;
+import com.extremettt.gui.Cell;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -52,8 +53,22 @@ public class TwoPlayerGameTest {
                 this.cells[i][j].setToken('X');
             }
         }
+        if(
+            this.cells[0][0].getToken() == ' ' ||
+            this.cells[0][1].getToken() == ' ' ||
+            this.cells[0][2].getToken() == ' ' ||
+            this.cells[1][0].getToken() == ' ' ||
+            this.cells[1][1].getToken() == ' ' ||
+            this.cells[1][2].getToken() == ' ' ||
+            this.cells[2][0].getToken() == ' ' ||
+            this.cells[2][1].getToken() == ' ' ||
+            this.cells[2][2].getToken() == ' '
+                ){
+            fail();
+        }
         assertTrue(game.isFull());
     }
+    
 
     @Test
     public void isFullFalseWhenEmpty() {
@@ -66,6 +81,29 @@ public class TwoPlayerGameTest {
         this.cells[0][1].setToken('O');
         this.cells[0][2].setToken('X');
         assertFalse(game.isFull());
+    }
+    @Test
+    public void isFullFalseOneToken(){
+        this.cells[0][0].setToken('O');
+        assertFalse(game.isFull());
+    }
+    @Test
+    public void isFullFalseEightTokens(){
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                this.cells[i][j].setToken('O');
+            }
+        }
+        assertFalse(game.isFull());
+    }
+    
+    
+    @Test
+    public void isWonRowsFalseWrongParameter(){
+        assertFalse(game.isWonRows('B'));
+        assertFalse(game.isWonRows('1'));
+        assertFalse(game.isWonRows('!'));
+        assertFalse(game.isWonRows(' '));
     }
 
     @Test
