@@ -4,7 +4,7 @@ Ohjelma ExtremeTTT on ristinolla-peli, jossa voi pelata kaksinpeliä, tai extrem
 
 [Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
 
-![Luokkakaavio](Dokumentaatio/luokkakaavio.png)
+[Luokkakaavio](Dokumentaatio/luokkakaavio.png)
 
 
 
