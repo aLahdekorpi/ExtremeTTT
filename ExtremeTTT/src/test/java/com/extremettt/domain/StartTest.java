@@ -1,11 +1,10 @@
-package com.extremettt.start;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import static com.extremettt.start.Main.startGame;
+package com.extremettt.domain;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.junit.After;
@@ -19,52 +18,52 @@ import static org.junit.Assert.*;
  *
  * @author lalex
  */
-public class MainTest {
-
+public class StartTest {
     private final ByteArrayOutputStream outPut = new ByteArrayOutputStream();
-
-    public MainTest() {
+    Start start;
+    public StartTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
         System.setOut(new PrintStream(outPut));
+        start = new Start();
     }
-
+    
     @After
     public void tearDown() {
         System.setOut(null);
     }
-
+    
     @Test
     public void startGameWorksWithS() {
-        startGame("S");
+        start.startGame("S");
         assertEquals("Single decided", outPut.toString());
     }
 
     @Test
     public void startGameWorksWithT() {
-        startGame("T");
+        start.startGame("T");
         assertEquals("Two decided", outPut.toString());
     }
 
     @Test
     public void startGameDoesntWorkWithEmpty() {
-        startGame("");
+        start.startGame("");
         assertEquals("Problem in parameter", outPut.toString());
     }
 
     @Test
     public void startGameDoesntWorkWithRandomString() {
-        startGame("RandomString");
+        start.startGame("Random String");
         assertEquals("Problem in parameter", outPut.toString());
     }
 

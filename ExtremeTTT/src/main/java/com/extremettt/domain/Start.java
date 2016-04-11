@@ -1,17 +1,23 @@
-package com.extremettt.start;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.extremettt.domain;
 
 import com.extremettt.logic.SinglePlayerGame;
 import com.extremettt.logic.TwoPlayerGame;
 import java.util.Scanner;
 
-public class Main {
-
-    public static void main(String[] args) {
-        startGame(singleOrTwo());
+/**
+ *
+ * @author lalex
+ */
+public class Start {
+    public Start(){
     }
-
-    //Starts a game
-    public static void startGame(String s) {
+    //Starts a game depending on parameter
+    public void startGame(String s) {
         if (s.equals("S")) {
             System.out.print("Single decided");
             SinglePlayerGame sGame = new SinglePlayerGame();
@@ -22,9 +28,8 @@ public class Main {
             System.out.print("Problem in parameter");
         }
     }
-
-    //Asks user if single or two, returns S or T
-    public static String singleOrTwo() {
+    //asks user if single or two, returns "S" or "T"
+    public String singleOrTwo() {
         System.out.println("Single player or Two player game?(S / T)");
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();

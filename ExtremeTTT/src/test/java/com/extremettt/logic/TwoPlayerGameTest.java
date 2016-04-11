@@ -115,10 +115,10 @@ public class TwoPlayerGameTest {
 
     @Test
     public void isWonRowsTrueSecondRow() {
-        this.cells[1][0].setToken('X');
-        this.cells[1][1].setToken('X');
-        this.cells[1][2].setToken('X');
-        assertTrue(game.isWonRows('X'));
+        this.cells[1][0].setToken('Y');
+        this.cells[1][1].setToken('Y');
+        this.cells[1][2].setToken('Y');
+        assertTrue(game.isWonRows('Y'));
     }
 
     @Test
@@ -155,10 +155,10 @@ public class TwoPlayerGameTest {
 
     @Test
     public void isWonColumnsTrueFirstColumn() {
-        this.cells[0][0].setToken('X');
-        this.cells[1][0].setToken('X');
-        this.cells[2][0].setToken('X');
-        assertTrue(game.isWonColumns('X'));
+        this.cells[0][0].setToken('Y');
+        this.cells[1][0].setToken('Y');
+        this.cells[2][0].setToken('Y');
+        assertTrue(game.isWonColumns('Y'));
     }
 
     @Test
