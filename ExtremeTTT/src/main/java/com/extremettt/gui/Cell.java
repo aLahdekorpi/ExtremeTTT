@@ -19,7 +19,7 @@ public class Cell extends JPanel {
 
     public Cell() {
         setBorder(new LineBorder(Color.BLACK, 1));
-        addMouseListener(new MyMouseListener(true));
+        addMouseListener(new MyMouseListener());
     }
 
     public char getToken() {
@@ -27,10 +27,10 @@ public class Cell extends JPanel {
     }
     /**
      * Setter for token
-     * @param token needs to be X or Y to work, token must also be empty before
+     * @param token needs to be X or O to work, token must also be empty before
      */
     public void setToken(char token) {
-        if (this.token == ' ' && (token == 'X' || token == 'Y')) {
+        if (this.token == ' ' && (token == 'X' || token == 'O')) {
             this.token = token;
             repaint();
         }

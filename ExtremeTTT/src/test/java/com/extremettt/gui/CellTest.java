@@ -43,28 +43,28 @@ public class CellTest {
 
     @Test
     public void setterWorksWithWrongParameters() {
-        cell.setToken('Y');
+        cell.setToken('O');
         cell.setToken(' ');
         cell.setToken('x');
-        cell.setToken('y');
+        cell.setToken('o');
         cell.setToken('!');
         cell.setToken('5');
-        assertEquals(cell.getToken(), 'Y');
+        assertEquals(cell.getToken(), 'O');
         
     }
     @Test
     public void setterWorksWithRightParameter(){
         cell.setToken('X');
         cell.setToken('x');
-        cell.setToken('y');
+        cell.setToken('o');
         cell.setToken('!');
         assertEquals(cell.getToken(), 'X');
     }
     @Test
     public void setterWorksIfTokenAlready(){
         cell.setToken('X');
-        cell.setToken('Y');
-        cell.setToken('Y');
+        cell.setToken('O');
+        cell.setToken('O');
         cell.setToken(' ');
         assertEquals(cell.getToken(), 'X');
     }

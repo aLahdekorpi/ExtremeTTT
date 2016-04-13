@@ -5,6 +5,7 @@
  */
 package com.extremettt.gui;
 
+import com.extremettt.logic.TwoPlayerGame;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -13,19 +14,19 @@ import java.awt.event.MouseEvent;
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {
-
-    private boolean isMultiplayer;
-
-    public MyMouseListener(boolean isMultiplayer) {
-        this.isMultiplayer = isMultiplayer;
+    private TwoPlayerGame game;
+    private char whoseTurn;
+    public MyMouseListener() {
+        game = new TwoPlayerGame();
+        whoseTurn = game.getWhoseTurn();
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        if(game.isFull()){
+            return;
+        }
+        
     }
 
-    public boolean getIfMultiplayer() {
-        return this.isMultiplayer;
-    }
 }

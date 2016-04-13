@@ -8,10 +8,9 @@ package com.extremettt.logic;
 import com.extremettt.gui.Frame;
 
 /**
- *
+ * Class contains the logic for a singleplayer game
  * @author lalex
  */
-//logic for single player
 public class SinglePlayerGame extends TwoPlayerGame {
 
     private char whoseTurn = 'X';

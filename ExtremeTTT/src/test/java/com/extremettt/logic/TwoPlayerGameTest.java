@@ -113,10 +113,10 @@ public class TwoPlayerGameTest {
 
     @Test
     public void isWonRowsTrueSecondRow() {
-        this.cells[1][0].setToken('Y');
-        this.cells[1][1].setToken('Y');
-        this.cells[1][2].setToken('Y');
-        assertTrue(game.isWonRows('Y'));
+        this.cells[1][0].setToken('O');
+        this.cells[1][1].setToken('O');
+        this.cells[1][2].setToken('O');
+        assertTrue(game.isWonRows('O'));
     }
 
     @Test
@@ -153,10 +153,10 @@ public class TwoPlayerGameTest {
 
     @Test
     public void isWonColumnsTrueFirstColumn() {
-        this.cells[0][0].setToken('Y');
-        this.cells[1][0].setToken('Y');
-        this.cells[2][0].setToken('Y');
-        assertTrue(game.isWonColumns('Y'));
+        this.cells[0][0].setToken('O');
+        this.cells[1][0].setToken('O');
+        this.cells[2][0].setToken('O');
+        assertTrue(game.isWonColumns('O'));
     }
 
     @Test
@@ -243,9 +243,9 @@ public class TwoPlayerGameTest {
 
     @Test
     public void isWonTrueWhenColumnsTrue() {
-        this.cells[1][0].setToken('Y');
-        this.cells[2][0].setToken('Y');
-        this.cells[0][0].setToken('Y');
+        this.cells[1][0].setToken('O');
+        this.cells[2][0].setToken('O');
+        this.cells[0][0].setToken('O');
         assertTrue(game.isWon());
     }
 
@@ -273,8 +273,8 @@ public class TwoPlayerGameTest {
 
     @Test
     public void setterWorksWithY() {
-        game.setWhoseTurn('Y');
-        assertEquals(game.getWhoseTurn(), 'Y');
+        game.setWhoseTurn('O');
+        assertEquals(game.getWhoseTurn(), 'O');
     }
 
     @Test
@@ -299,12 +299,12 @@ public class TwoPlayerGameTest {
     public void swapTurnsWorksWhenX() {
         game.setWhoseTurn('X');
         game.swapTurns();
-        assertEquals('Y', game.getWhoseTurn());
+        assertEquals('O', game.getWhoseTurn());
     }
 
     @Test
     public void swapTurnsWorksWhenY() {
-        game.setWhoseTurn('Y');
+        game.setWhoseTurn('O');
         game.swapTurns();
         assertEquals('X', game.getWhoseTurn());
 

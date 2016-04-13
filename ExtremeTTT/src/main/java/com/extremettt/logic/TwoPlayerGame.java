@@ -41,11 +41,11 @@ public class TwoPlayerGame {
     }
     /**
      * Checks if game is won by 3 in a row
-     * @param token Char, X or Y, else returns false
+     * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
     public boolean isWonRows(char token) {
-        if (!(token == 'Y' || token == 'X')) {
+        if (!(token == 'O' || token == 'X')) {
             return false;
         }
         for (int i = 0; i <= 2; i++) {
@@ -68,11 +68,11 @@ public class TwoPlayerGame {
 
     /**
      * Checks if game is won by 3 in a column
-     * @param token Char, X or Y, else returns false
+     * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
     public boolean isWonColumns(char token) {
-        if (!(token == 'Y' || token == 'X')) {
+        if (!(token == 'O' || token == 'X')) {
             return false;
         }
         for (int j = 0; j <= 2; j++) {
@@ -87,11 +87,11 @@ public class TwoPlayerGame {
 
     /**
      * Checks if game is won by 3 in a diagonal line
-     * @param token Char, X or Y, else returns false
+     * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
     public boolean isWonDiagonal(char token) {
-        if (!(token == 'Y' || token == 'X')) {
+        if (!(token == 'O' || token == 'X')) {
             return false;
         }
         if ((this.cells[0][0].getToken() == token)
@@ -117,9 +117,9 @@ public class TwoPlayerGame {
             isWonRows('X') ||
             isWonColumns('X') ||
             isWonDiagonal('X') ||
-            isWonRows('Y') ||
-            isWonColumns('Y')||
-            isWonDiagonal('Y')    
+            isWonRows('O') ||
+            isWonColumns('O')||
+            isWonDiagonal('O')    
             ) {
             return true;
         }
@@ -128,7 +128,7 @@ public class TwoPlayerGame {
 
     //setter for whoseturn
     public void setWhoseTurn(char whoseTurn) {
-        if (whoseTurn == 'X' || whoseTurn == 'Y') {
+        if (whoseTurn == 'X' || whoseTurn == 'O') {
             this.whoseTurn = whoseTurn;
         }
     }
@@ -141,7 +141,7 @@ public class TwoPlayerGame {
     //swaps turn
     public void swapTurns() {
         if (this.whoseTurn == 'X') {
-            this.whoseTurn = 'Y';
+            this.whoseTurn = 'O';
         } else {
             this.whoseTurn = 'X';
         }
