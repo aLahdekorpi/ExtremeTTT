@@ -12,11 +12,18 @@ import java.util.Scanner;
 /**
  *
  * @author lalex
+ * Class to start the game
  */
 public class Start {
     public Start(){
     }
-    //Starts a game depending on parameter
+    /**
+     * Starts a game depending on parameter
+     * <p
+     * prints "Single decided" if parameter is "S",
+     * prints "Two decided" if parameter is "T",
+     * @param String Should be "S" or "T"
+     */ 
     public void startGame(String s) {
         if (s.equals("S")) {
             System.out.print("Single decided");
@@ -28,7 +35,10 @@ public class Start {
             System.out.print("Problem in parameter");
         }
     }
-    //asks user if single or two, returns "S" or "T"
+    /**
+     * asks user if single or two
+     * @return "S" or "T"
+     */
     public String singleOrTwo() {
         System.out.println("Single player or Two player game?(S / T)");
         Scanner scanner = new Scanner(System.in);

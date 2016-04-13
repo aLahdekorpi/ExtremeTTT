@@ -11,21 +11,24 @@ import com.extremettt.gui.Frame;
 /**
  *
  * @author lalex
+ * Class contains the logic for a multiplayer game
  */
-//The logic for multiplayer game
 public class TwoPlayerGame {
 
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
-
+    
     public TwoPlayerGame() {
         this.frame = new Frame();
         this.cells = frame.getCells();
 
     }
 
-    //checks if board is full
+    /**
+     * Checks is gameboard is full
+     * @return true if full, false if not.
+     */
     public boolean isFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -36,7 +39,11 @@ public class TwoPlayerGame {
         }
         return true;
     }
-    //checks if game is won by 3 in a row
+    /**
+     * Checks if game is won by 3 in a row
+     * @param token Char, X or Y, else returns false
+     * @return True if game is won, false if not
+     */
     public boolean isWonRows(char token) {
         if (!(token == 'Y' || token == 'X')) {
             return false;
@@ -59,7 +66,11 @@ public class TwoPlayerGame {
         return frame;
     }
 
-    //checks if game is won by 3 in a column
+    /**
+     * Checks if game is won by 3 in a column
+     * @param token Char, X or Y, else returns false
+     * @return True if game is won, false if not
+     */
     public boolean isWonColumns(char token) {
         if (!(token == 'Y' || token == 'X')) {
             return false;
@@ -74,7 +85,11 @@ public class TwoPlayerGame {
         return false;
     }
 
-    //checks if game is won by 3 diagonally
+    /**
+     * Checks if game is won by 3 in a diagonal line
+     * @param token Char, X or Y, else returns false
+     * @return True if game is won, false if not
+     */
     public boolean isWonDiagonal(char token) {
         if (!(token == 'Y' || token == 'X')) {
             return false;
@@ -93,12 +108,19 @@ public class TwoPlayerGame {
         return false;
     }
 
-    //checks every victory possibility
-    public boolean isWon(char token) {
-        if (!(token == 'Y' || token == 'X')) {
-            return false;
-        }
-        if (isWonRows(token) || isWonColumns(token) || isWonDiagonal(token)) {
+    /**
+     * Checks if game is won by any possibility
+     * @return True if game is won by anyone, false if not
+     */
+    public boolean isWon() {
+        if (
+            isWonRows('X') ||
+            isWonColumns('X') ||
+            isWonDiagonal('X') ||
+            isWonRows('Y') ||
+            isWonColumns('Y')||
+            isWonDiagonal('Y')    
+            ) {
             return true;
         }
         return false;
