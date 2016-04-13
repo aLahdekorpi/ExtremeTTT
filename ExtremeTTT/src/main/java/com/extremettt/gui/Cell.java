@@ -10,10 +10,9 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 /**
- *
+ * Panel which holds the Cells
  * @author lalex
  */
-//panel which holds the tokens
 public class Cell extends JPanel {
 
     private char token = ' ';
@@ -26,14 +25,20 @@ public class Cell extends JPanel {
     public char getToken() {
         return token;
     }
-
+    /**
+     * Setter for token
+     * @param token needs to be X or Y to work, token must also be empty before
+     */
     public void setToken(char token) {
         if (this.token == ' ' && (token == 'X' || token == 'Y')) {
             this.token = token;
             repaint();
         }
     }
-
+    /**
+     * Draws token to the cell 
+     * @param g graphics
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

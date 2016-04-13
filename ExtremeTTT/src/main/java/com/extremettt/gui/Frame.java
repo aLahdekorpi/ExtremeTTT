@@ -22,15 +22,9 @@ public class Frame extends JFrame {
     private char whoseTurn = 'X';
 
     public Frame() {
-        JPanel panel = new JPanel(new GridLayout(3, 3, 0, 0));
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                panel.add(cells[i][j] = new Cell());
-            }
-        }
+        JPanel panel = newPanelWithCells();
         panel.setBorder(new LineBorder(Color.red, 1));
         jlblStatus.setBorder(new LineBorder(Color.yellow, 1));
-
         add(panel, BorderLayout.CENTER);
         add(jlblStatus, BorderLayout.SOUTH);
     }
@@ -41,6 +35,19 @@ public class Frame extends JFrame {
 
     public char getWhoseTurn() {
         return whoseTurn;
+    }
+    /**
+     * Creates new JPanel full of empty cells
+     * @return JPanel full of empty cells
+     */
+    public JPanel newPanelWithCells(){
+        JPanel panel = new JPanel(new GridLayout(3, 3, 0, 0));
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                panel.add(cells[i][j] = new Cell());
+            }
+        }
+        return panel;
     }
 
 }
