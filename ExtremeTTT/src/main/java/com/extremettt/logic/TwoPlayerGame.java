@@ -20,7 +20,7 @@ public class TwoPlayerGame {
     private Frame frame;
     
     public TwoPlayerGame() {
-        this.frame = new Frame(this);
+        this.frame = new Frame(TwoPlayerGame.this);
         this.cells = frame.getCells();
         
     }

@@ -39,6 +39,11 @@ public class Frame extends JFrame {
     public char getWhoseTurn() {
         return whoseTurn;
     }
+
+    public JLabel getJlblStatus() {
+        return jlblStatus;
+    }
+    
     
     /**
      * Creates new JPanel full of empty cells

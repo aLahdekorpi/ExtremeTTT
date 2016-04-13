@@ -20,7 +20,7 @@ public class Cell extends JPanel {
 
     public Cell(TwoPlayerGame game) {
         setBorder(new LineBorder(Color.BLACK, 1));
-        addMouseListener(new MyMouseListener(game));
+        addMouseListener(new MyMouseListener(game, Cell.this));
     }
 
     public char getToken() {

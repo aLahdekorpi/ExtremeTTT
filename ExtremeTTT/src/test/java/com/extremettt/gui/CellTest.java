@@ -6,6 +6,7 @@ package com.extremettt.gui;
  * and open the template in the editor.
  */
 import com.extremettt.gui.Cell;
+import com.extremettt.logic.TwoPlayerGame;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -20,7 +21,7 @@ import static org.junit.Assert.*;
 public class CellTest {
 
     private Cell cell;
-
+    private TwoPlayerGame game;
     public CellTest() {
     }
 
@@ -34,7 +35,8 @@ public class CellTest {
 
     @Before
     public void setUp() {
-        cell = new Cell();
+        game = new TwoPlayerGame();
+        cell = new Cell(game);
     }
 
     @After
