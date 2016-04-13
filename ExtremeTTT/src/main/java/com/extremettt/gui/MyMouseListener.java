@@ -16,8 +16,8 @@ import java.awt.event.MouseEvent;
 public class MyMouseListener extends MouseAdapter {
     private TwoPlayerGame game;
     private char whoseTurn;
-    public MyMouseListener() {
-        game = new TwoPlayerGame();
+    public MyMouseListener(TwoPlayerGame game) {
+        this.game = game;
         whoseTurn = game.getWhoseTurn();
     }
 
@@ -28,5 +28,4 @@ public class MyMouseListener extends MouseAdapter {
         }
         
     }
-
 }

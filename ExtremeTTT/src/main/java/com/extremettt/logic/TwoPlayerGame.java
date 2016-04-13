@@ -14,15 +14,15 @@ import com.extremettt.gui.Frame;
  * Class contains the logic for a multiplayer game
  */
 public class TwoPlayerGame {
-
+    
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
     
     public TwoPlayerGame() {
-        this.frame = new Frame();
+        this.frame = new Frame(this);
         this.cells = frame.getCells();
-
+        
     }
 
     /**

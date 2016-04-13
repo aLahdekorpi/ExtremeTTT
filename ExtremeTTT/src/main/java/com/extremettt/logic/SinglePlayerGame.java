@@ -17,6 +17,6 @@ public class SinglePlayerGame extends TwoPlayerGame {
     private Frame frame;
 
     public SinglePlayerGame() {
-        frame = new Frame();
+        frame = new Frame(this);
     }
 }

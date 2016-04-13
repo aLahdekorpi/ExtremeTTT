@@ -5,6 +5,7 @@
  */
 package com.extremettt.gui;
 
+import com.extremettt.logic.TwoPlayerGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -14,12 +15,12 @@ import java.awt.*;
  * @author lalex
  */
 public class Cell extends JPanel {
-
+    private TwoPlayerGame game;
     private char token = ' ';
 
-    public Cell() {
+    public Cell(TwoPlayerGame game) {
         setBorder(new LineBorder(Color.BLACK, 1));
-        addMouseListener(new MyMouseListener());
+        addMouseListener(new MyMouseListener(game));
     }
 
     public char getToken() {
