@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 
 /**
- *
+ * Mouse Listener
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {
@@ -26,20 +26,23 @@ public class MyMouseListener extends MouseAdapter {
         this.token = cell.getToken();
         whoseTurn = game.getWhoseTurn();
     }
-
+    /**
+     * What to do when clicking a cell
+     * @param e Mouse Event
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         //checks if game is full
-        if(game.isFull()){
+        if (game.isFull()) {
             return;
         }
         //if cell doesn't have a token and its someones turn, sets token to cell
-        if (this.token == ' ' && whoseTurn != ' '){
+        if (this.token == ' ' && whoseTurn != ' ') {
             this.cell.setToken(whoseTurn);
         }
         
         //if game is won, declare winner
-        if (game.isWon()){
+        if (game.isWon()) {
             //jlbl.setText(whoseTurn + " won, game over");
             
         //if game is full, but game is not won, declare tie
@@ -49,6 +52,6 @@ public class MyMouseListener extends MouseAdapter {
             game.swapTurns();
             whoseTurn = game.getWhoseTurn();
             //jlbl.setText(whoseTurn + "'s turn.");
-            }
+        }
     }
 }

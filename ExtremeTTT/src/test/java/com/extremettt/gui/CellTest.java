@@ -15,7 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
+ * Test class for class Cell
  * @author lalex
  */
 public class CellTest {

@@ -9,38 +9,40 @@ import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
 
 /**
- *
- * @author lalex
  * Class contains the logic for a multiplayer game
+ * @author lalex 
  */
 public class TwoPlayerGame {
-    
+
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
-    
+
     public TwoPlayerGame() {
         this.frame = new Frame(TwoPlayerGame.this);
         this.cells = frame.getCells();
-        
+
     }
 
     /**
      * Checks is gameboard is full
+     *
      * @return true if full, false if not.
      */
     public boolean isFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (this.cells[i][j].getToken() == ' '){
+                if (this.cells[i][j].getToken() == ' ') {
                     return false;
                 }
             }
         }
         return true;
     }
+
     /**
      * Checks if game is won by 3 in a row
+     *
      * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
@@ -68,6 +70,7 @@ public class TwoPlayerGame {
 
     /**
      * Checks if game is won by 3 in a column
+     *
      * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
@@ -87,6 +90,7 @@ public class TwoPlayerGame {
 
     /**
      * Checks if game is won by 3 in a diagonal line
+     *
      * @param token Char, X or O, else returns false
      * @return True if game is won, false if not
      */
@@ -110,17 +114,16 @@ public class TwoPlayerGame {
 
     /**
      * Checks if game is won by any possibility
+     *
      * @return True if game is won by anyone, false if not
      */
     public boolean isWon() {
-        if (
-            isWonRows('X') ||
-            isWonColumns('X') ||
-            isWonDiagonal('X') ||
-            isWonRows('O') ||
-            isWonColumns('O')||
-            isWonDiagonal('O')    
-            ) {
+        if (isWonRows('X')
+                || isWonColumns('X')
+                || isWonDiagonal('X')
+                || isWonRows('O')
+                || isWonColumns('O')
+                || isWonDiagonal('O')) {
             return true;
         }
         return false;
