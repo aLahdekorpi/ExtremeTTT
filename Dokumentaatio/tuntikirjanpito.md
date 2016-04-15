@@ -8,3 +8,6 @@ Päivä | Tunnit | Kuvaus
 30.3.2016 | 2h | Testejä, Readme.
 5.4.2016  | 3h | Koodia luokkiin Cell, Frame, TwoPlayerGame
 6.4.2016  | 3h | TwoPlayerGameTestit, Readme linkit, CheckStyle & pit
+12.4.2016 | 2h | Testejä
+13.4.2016 | 2h | TwoPlayerGame lisää metodeja
+14.4.2016 | 3h | Mymouselistener toiminnallusuus, yhteys cell-frame-mml-tpg
