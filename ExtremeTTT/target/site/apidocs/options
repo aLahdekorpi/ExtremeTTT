@@ -1,0 +1,22 @@
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2016. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/lalex/ExtremeTTT/ExtremeTTT/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ExtremeTTT 1.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' '/home/lalex/ExtremeTTT/ExtremeTTT/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ExtremeTTT 1.0-SNAPSHOT API'

@@ -11,7 +11,7 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 /**
- * Main GUI class, Frame
+ * Main GUI class, Frame.
  * @author lalex
  */
 public class Frame extends JFrame {

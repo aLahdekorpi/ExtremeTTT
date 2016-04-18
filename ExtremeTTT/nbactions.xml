@@ -21,6 +21,13 @@
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-Javadoc</actionName>
+            <displayName>Javadoc</displayName>
+            <goals>
+                <goal>javadoc:javadoc</goal>
+            </goals>
+        </action>
     <action>
             <actionName>debug</actionName>
             <packagings>

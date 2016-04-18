@@ -10,9 +10,9 @@ import com.extremettt.logic.TwoPlayerGame;
 import java.util.Scanner;
 
 /**
- *
+ * Class to start the game.
  * @author lalex
- * Class to start the game
+ * 
  */
 public class Start {
     public Start(){
@@ -22,7 +22,8 @@ public class Start {
      * <p
      * prints "Single decided" if parameter is "S",
      * prints "Two decided" if parameter is "T",
-     * @param String Should be "S" or "T"
+     * prints "Problem in parameter, if not "T" or "S".
+     * @param s String, should be "S" or "T"
      */ 
     public void startGame(String s) {
         if (s.equals("S")) {

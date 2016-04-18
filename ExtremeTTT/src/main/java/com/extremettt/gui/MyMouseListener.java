@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 
 /**
- * Mouse Listener
+ * Mouse Listener, what to do when clicking mouse.
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {

@@ -13,7 +13,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Test class for class TwoPlayerGame
+ * Test class for class TwoPlayerGame.
  * @author lalex
  */
 public class TwoPlayerGameTest {

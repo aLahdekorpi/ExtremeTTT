@@ -8,7 +8,7 @@ package com.extremettt.logic;
 import com.extremettt.gui.Frame;
 
 /**
- * Class contains the logic for a singleplayer game
+ * Class contains the logic for a singleplayer game.
  * @author lalex
  */
 public class SinglePlayerGame extends TwoPlayerGame {

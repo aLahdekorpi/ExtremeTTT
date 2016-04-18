@@ -9,7 +9,7 @@ import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
 
 /**
- * Class contains the logic for a multiplayer game
+ * Class contains the logic for a multiplayer game.
  * @author lalex 
  */
 public class TwoPlayerGame {

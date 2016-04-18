@@ -11,7 +11,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 /**
- * Panel which holds the Cells
+ * Panel which holds the Cells.
  * @author lalex
  */
 public class Cell extends JPanel {
