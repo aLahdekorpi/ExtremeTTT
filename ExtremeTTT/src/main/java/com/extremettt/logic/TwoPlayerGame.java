@@ -7,6 +7,7 @@ package com.extremettt.logic;
 
 import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
+import javax.swing.JFrame;
 
 /**
  * Class contains the logic for a multiplayer game.
@@ -20,8 +21,24 @@ public class TwoPlayerGame {
 
     public TwoPlayerGame() {
         this.frame = new Frame(TwoPlayerGame.this);
-        this.cells = frame.getCells();
+        initializeGameFrame();
+        this.cells = this.frame.getCells();
 
+    }
+    /**
+     * Sets title for frame,
+     * sets frames size,
+     * sets the frame to close when pressing exit,
+     * sets location relative to Null,
+     * sets the frame visible.
+     * 
+     */
+    public void initializeGameFrame(){
+        this.frame.setTitle("ExtremeTTT!");
+        this.frame.setSize(600, 600);
+        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.frame.setLocationRelativeTo(null);
+        this.frame.setVisible(true);
     }
 
     /**
@@ -50,7 +67,7 @@ public class TwoPlayerGame {
         if (!(token == 'O' || token == 'X')) {
             return false;
         }
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i < 3; i++) {
             if ((this.cells[i][0].getToken() == token)
                     && (this.cells[i][1].getToken() == token)
                     && (this.cells[i][2].getToken() == token)) {
@@ -78,7 +95,7 @@ public class TwoPlayerGame {
         if (!(token == 'O' || token == 'X')) {
             return false;
         }
-        for (int j = 0; j <= 2; j++) {
+        for (int j = 0; j < 3; j++) {
             if ((this.cells[0][j].getToken() == token)
                     && (this.cells[1][j].getToken() == token)
                     && (this.cells[2][j].getToken() == token)) {
@@ -144,9 +161,9 @@ public class TwoPlayerGame {
     //swaps turn
     public void swapTurns() {
         if (this.whoseTurn == 'X') {
-            this.whoseTurn = 'O';
+            setWhoseTurn('O');
         } else {
-            this.whoseTurn = 'X';
+            setWhoseTurn('X');
         }
     }
 }

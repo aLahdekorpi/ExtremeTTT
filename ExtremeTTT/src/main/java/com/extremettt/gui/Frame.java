@@ -16,7 +16,6 @@ import javax.swing.border.LineBorder;
  */
 public class Frame extends JFrame {
 
-    //create the grid
     private Cell[][] cells = new Cell[3][3];
     private TwoPlayerGame game;
     JLabel jlblStatus = new JLabel("X's turn to play");
@@ -24,6 +23,13 @@ public class Frame extends JFrame {
 
     public Frame(TwoPlayerGame game) {
         this.game = game;
+        initializeFrame();
+    }
+    /**
+     * Creates new panel through method newPanelWithCells,
+     * sets borders to panel and JLabel.
+     */
+    public void initializeFrame(){
         JPanel panel = newPanelWithCells();
         panel.setBorder(new LineBorder(Color.red, 1));
         jlblStatus.setBorder(new LineBorder(Color.yellow, 1));
@@ -43,8 +49,13 @@ public class Frame extends JFrame {
         return jlblStatus;
     }
 
+    public void setJlblStatus(JLabel jlblStatus) {
+        this.jlblStatus = jlblStatus;
+    }
+    
+
     /**
-     * Creates new JPanel full of empty cells
+     * Creates new JPanel full of empty cells.
      *
      * @return JPanel full of empty cells
      */
