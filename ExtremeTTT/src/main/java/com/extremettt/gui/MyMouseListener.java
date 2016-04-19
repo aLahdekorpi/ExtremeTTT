@@ -50,19 +50,20 @@ public class MyMouseListener extends MouseAdapter {
         
         //if game is won, declare winner
         if (this.game.isWon()) {
-            this.jlbl.setText(this.whoseTurn + " won, game over");
+            this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
             this.whoseTurn = ' ';
      
         } 
         //if game is full, but game is not won, declare tie 
         else if (this.game.isFull()) {
-                   this.jlbl.setText("Tie");
+                   this.game.getFrame().jlblStatus.setText("tie!");
                    this.whoseTurn = ' ';
         }
         
         if (!this.game.isWon() && !this.game.isFull()) {
             this.game.swapTurns();
             this.whoseTurn = this.game.getWhoseTurn();
+            this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");
         }
     }
 }
