@@ -12,3 +12,5 @@ Päivä | Tunnit | Kuvaus
 13.4.2016 | 2h | TwoPlayerGame lisää metodeja, javadoc
 14.4.2016 | 3h | Mymouselistener toiminnallusuus, yhteys cell-frame-mml-tpg
 18.4.2016 | 2h | Lisää javadoc, MML jlbl(ei toimi vielä)
+20.4.2016 | 1h | MML jlbl(toimii)
+21.4.2016 | 2h | Sekvenssikaavio TPG, Luokkakaavion päivitys, ReadMe

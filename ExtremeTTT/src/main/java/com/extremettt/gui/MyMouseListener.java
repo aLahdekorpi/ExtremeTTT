@@ -29,8 +29,6 @@ public class MyMouseListener extends MouseAdapter {
         this.cell = cell;
         this.token = cell.getToken();
         this.whoseTurn = game.getWhoseTurn();
-        this.frame = this.game.getFrame();
-        //this.jlbl = this.frame.getJlblStatus();
     }
     /**
      * What to do when clicking a cell
@@ -39,8 +37,9 @@ public class MyMouseListener extends MouseAdapter {
     @Override
     public void mouseClicked(MouseEvent e) {
         this.whoseTurn = this.game.getWhoseTurn();
-        //checks if game is full
-        if (this.game.isFull()) {
+        //checks if game is full or won before setting any tokens
+        if (this.game.isFull() || this.game.isWon()) {
+            this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game is already over");
             return;
         }
         //if cell doesn't have a token and its someones turn, sets token to cell
@@ -59,7 +58,7 @@ public class MyMouseListener extends MouseAdapter {
                    this.game.getFrame().jlblStatus.setText("tie!");
                    this.whoseTurn = ' ';
         }
-        
+        //if game is not won nor full, swap turns and print whose turn it is
         if (!this.game.isWon() && !this.game.isFull()) {
             this.game.swapTurns();
             this.whoseTurn = this.game.getWhoseTurn();
