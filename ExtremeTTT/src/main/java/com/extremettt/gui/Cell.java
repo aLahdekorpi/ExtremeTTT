@@ -17,7 +17,10 @@ import java.awt.*;
 public class Cell extends JPanel {
     private TwoPlayerGame game;
     private char token = ' ';
-
+    /**
+     * Constructor, sets border and adds new MouseListener.
+     * @param game Game to which this cell is attached to.
+     */
     public Cell(TwoPlayerGame game) {
         setBorder(new LineBorder(Color.BLACK, 1));
         addMouseListener(new MyMouseListener(game, Cell.this));
@@ -27,7 +30,7 @@ public class Cell extends JPanel {
         return token;
     }
     /**
-     * Setter for token
+     * Setter for token.
      * @param token needs to be X or O to work, token must also be empty before
      */
     public void setToken(char token) {
@@ -37,7 +40,7 @@ public class Cell extends JPanel {
         }
     }
     /**
-     * Draws token to the cell 
+     * Draws token to the cell. 
      * @param g graphics
      */
     @Override

@@ -20,7 +20,10 @@ public class Frame extends JFrame {
     private TwoPlayerGame game;
     JLabel jlblStatus = new JLabel("X's turn to play");
     private char whoseTurn = 'X';
-
+    /**
+     * Constructor, also uses method initializeFrame.
+     * @param game Game to which this frame is attached into
+     */
     public Frame(TwoPlayerGame game) {
         this.game = game;
         initializeFrame();
@@ -29,7 +32,7 @@ public class Frame extends JFrame {
      * Creates new panel through method newPanelWithCells,
      * sets borders to panel and JLabel.
      */
-    public void initializeFrame(){
+    public void initializeFrame() {
         JPanel panel = newPanelWithCells();
         panel.setBorder(new LineBorder(Color.red, 1));
         jlblStatus.setBorder(new LineBorder(Color.yellow, 1));

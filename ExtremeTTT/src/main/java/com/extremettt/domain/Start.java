@@ -15,14 +15,18 @@ import java.util.Scanner;
  * 
  */
 public class Start {
+    /**
+     * Constructor, no functions, no parameters.
+     */
     public Start(){
     }
     /**
-     * Starts a game depending on parameter
-     * <p
+     * Starts a game depending on parameter.
+     * <p>
      * prints "Single decided" if parameter is "S",
      * prints "Two decided" if parameter is "T",
      * prints "Problem in parameter, if not "T" or "S".
+     * </p>
      * @param s String, should be "S" or "T"
      */ 
     public void startGame(String s) {
@@ -37,7 +41,7 @@ public class Start {
         }
     }
     /**
-     * asks user if single or two
+     * asks user if single or two.
      * @return "S" or "T"
      */
     public String singleOrTwo() {

@@ -4,10 +4,9 @@ Ohjelma ExtremeTTT on ristinolla-peli, jossa voi pelata kaksinpeliä, tai extrem
 
 [Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
 
-[CheckStyle](Dokumentaatio/checkstyle.html)
-
-[Pit](Dokumentaatio/pit/201604211251/index.html)
-
 [Luokkakaavio](Dokumentaatio/Luokkakaavio.png)
 
-[Toimisko](https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/checkstyle.html)
+[CheckStyle](https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/checkstyle.html)
+
+[Pit]https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/pit/201604211251/index.html
+

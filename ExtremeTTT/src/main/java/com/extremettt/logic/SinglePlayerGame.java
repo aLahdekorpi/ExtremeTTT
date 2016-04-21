@@ -15,7 +15,9 @@ public class SinglePlayerGame extends TwoPlayerGame {
 
     private char whoseTurn = 'X';
     private Frame frame;
-
+    /**
+     * Constructor.
+     */
     public SinglePlayerGame() {
         frame = new Frame(this);
     }

@@ -15,23 +15,34 @@ import javax.swing.border.LineBorder;
 
 /**
  * Mouse Listener, what to do when clicking mouse.
+ *
  * @author lalex
  */
 public class MyMouseListener extends MouseAdapter {
+
     private TwoPlayerGame game;
     private char whoseTurn;
     private char token;
     private Cell cell;
     private JLabel jlbl;
     private Frame frame;
+
+    /**
+     * Constructor.
+     *
+     * @param game Game
+     * @param cell Cell
+     */
     public MyMouseListener(TwoPlayerGame game, Cell cell) {
         this.game = game;
         this.cell = cell;
         this.token = cell.getToken();
         this.whoseTurn = game.getWhoseTurn();
     }
+
     /**
-     * What to do when clicking a cell
+     * What to do when clicking a cell.
+     *
      * @param e Mouse Event
      */
     @Override
@@ -46,17 +57,15 @@ public class MyMouseListener extends MouseAdapter {
         if (this.cell.getToken() == ' ' && this.whoseTurn != ' ') {
             this.cell.setToken(whoseTurn);
         }
-        
+
         //if game is won, declare winner
         if (this.game.isWon()) {
             this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
             this.whoseTurn = ' ';
-     
-        } 
-        //if game is full, but game is not won, declare tie 
-        else if (this.game.isFull()) {
-                   this.game.getFrame().jlblStatus.setText("tie!");
-                   this.whoseTurn = ' ';
+            //if game is full, but game is not won, declare tie 
+        } else if (this.game.isFull()) {
+            this.game.getFrame().jlblStatus.setText("tie!");
+            this.whoseTurn = ' ';
         }
         //if game is not won nor full, swap turns and print whose turn it is
         if (!this.game.isWon() && !this.game.isFull()) {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/domain/Start.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/domain/Main.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/logic/TwoPlayerGame.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/logic/SinglePlayerGame.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/gui/MyMouseListener.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/gui/Frame.java">
+</file>
+<file name="/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/gui/Cell.java">
+</file>
+</checkstyle>
