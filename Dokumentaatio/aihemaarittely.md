@@ -9,4 +9,7 @@ Riippuen ajasta näiden ominaisuuksen ollessa valmiita, saatetaan toiminnallisuu
 - mahdollinen kaksinpeli
 
 ###Luokkakaavio
-![Kaavio](/Dokumentaatio/luokkakaavio.png)
+![Kaavio](/Dokumentaatio/Luokkakaavio.png)
+
+###Sekvenssikaavio
+![Sek](/Dokumentaatio/TwoPlayerGameSequence.png)
