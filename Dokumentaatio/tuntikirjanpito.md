@@ -14,3 +14,4 @@ Päivä | Tunnit | Kuvaus
 18.4.2016 | 2h | Lisää javadoc, MML jlbl(ei toimi vielä)
 20.4.2016 | 1h | MML jlbl(toimii)
 21.4.2016 | 2h | Sekvenssikaavio TPG, Luokkakaavion päivitys, ReadMe
+25.4.2016 | 2h | SinglePlayer aloitus
