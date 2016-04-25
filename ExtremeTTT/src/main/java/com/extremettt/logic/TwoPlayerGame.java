@@ -19,6 +19,8 @@ public class TwoPlayerGame {
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
+    private char mode = 'T';
+
     /**
      * Constructor.
      * Creates new Frame, uses method initializeGameFrame.
@@ -175,5 +177,8 @@ public class TwoPlayerGame {
         } else {
             setWhoseTurn('X');
         }
+    }
+    public char getMode() {
+        return mode;
     }
 }

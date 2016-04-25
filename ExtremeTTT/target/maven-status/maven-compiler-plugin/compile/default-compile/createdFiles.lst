@@ -4,4 +4,5 @@ com/extremettt/logic/TwoPlayerGame.class
 com/extremettt/gui/MyMouseListener.class
 com/extremettt/domain/Main.class
 com/extremettt/logic/SinglePlayerGame.class
+com/extremettt/logic/SinglePlayerMouseListener.class
 com/extremettt/gui/Cell.class

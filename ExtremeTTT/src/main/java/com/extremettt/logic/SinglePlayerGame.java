@@ -5,6 +5,7 @@
  */
 package com.extremettt.logic;
 
+import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
 
 /**
@@ -15,10 +16,20 @@ public class SinglePlayerGame extends TwoPlayerGame {
 
     private char whoseTurn = 'X';
     private Frame frame;
+    private Cell[][] cells;
+    private char mode = 'S';
     /**
      * Constructor.
      */
     public SinglePlayerGame() {
-        frame = new Frame(this);
+        this.frame = new Frame(SinglePlayerGame.this);
+        initializeGameFrame();
+        this.cells = this.frame.getCells();
+
     }
+
+    public char getMode() {
+        return mode;
+    }
+    
 }

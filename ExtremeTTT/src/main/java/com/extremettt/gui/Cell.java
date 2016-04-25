@@ -5,6 +5,7 @@
  */
 package com.extremettt.gui;
 
+import com.extremettt.logic.SinglePlayerMouseListener;
 import com.extremettt.logic.TwoPlayerGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -22,8 +23,9 @@ public class Cell extends JPanel {
      * @param game Game to which this cell is attached to.
      */
     public Cell(TwoPlayerGame game) {
+        this.game = game;
         setBorder(new LineBorder(Color.BLACK, 1));
-        addMouseListener(new MyMouseListener(game, Cell.this));
+        addSingleOrDoubleMouseListener();
     }
 
     public char getToken() {
@@ -52,6 +54,13 @@ public class Cell extends JPanel {
             g.drawLine(getWidth() - 10, 10, 10, getHeight() - 10);
         } else if (token == 'O') {
             g.drawOval(10, 10, getWidth() - 20, getHeight() - 20);
+        }
+    }
+    public void addSingleOrDoubleMouseListener(){
+        if (this.game.getMode()=='T'){
+            addMouseListener(new MyMouseListener(game, Cell.this));
+        } else {
+            addMouseListener(new SinglePlayerMouseListener(game, Cell.this));
         }
     }
 }

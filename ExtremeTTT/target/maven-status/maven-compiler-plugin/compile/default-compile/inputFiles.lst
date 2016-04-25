@@ -1,5 +1,6 @@
 /home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/gui/Frame.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/gui/Cell.java
+/home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/logic/SinglePlayerMouseListener.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/domain/Start.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/logic/TwoPlayerGame.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/main/java/com/extremettt/logic/SinglePlayerGame.java

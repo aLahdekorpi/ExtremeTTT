@@ -25,7 +25,6 @@ public class MyMouseListener extends MouseAdapter {
     private char token;
     private Cell cell;
     private JLabel jlbl;
-    private Frame frame;
 
     /**
      * Constructor.
@@ -60,18 +59,37 @@ public class MyMouseListener extends MouseAdapter {
 
         //if game is won, declare winner
         if (this.game.isWon()) {
-            this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
-            this.whoseTurn = ' ';
+            gameIsWonAfterClicked();
             //if game is full, but game is not won, declare tie 
         } else if (this.game.isFull()) {
-            this.game.getFrame().jlblStatus.setText("tie!");
-            this.whoseTurn = ' ';
+            gameIsFullAfterClicked();
         }
         //if game is not won nor full, swap turns and print whose turn it is
         if (!this.game.isWon() && !this.game.isFull()) {
-            this.game.swapTurns();
-            this.whoseTurn = this.game.getWhoseTurn();
-            this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");
+            swapTurnsAndSetLabel();
         }
+    }
+    public boolean playAgain(){
+        return true;
+    }
+    public void newGame(){
+        this.game = new TwoPlayerGame();
+    }
+    public void gameIsWonAfterClicked(){
+        this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
+        this.whoseTurn = ' ';
+        this.game.getFrame().dispose();
+        newGame();
+    }
+    public void gameIsFullAfterClicked(){
+        this.game.getFrame().jlblStatus.setText("tie!");
+            this.whoseTurn = ' ';
+            this.game.getFrame().dispose();
+            newGame();
+    }
+    public void swapTurnsAndSetLabel(){
+        this.game.swapTurns();
+        this.whoseTurn = this.game.getWhoseTurn();
+        this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");
     }
 }
