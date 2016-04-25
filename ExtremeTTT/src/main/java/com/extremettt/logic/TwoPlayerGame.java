@@ -19,7 +19,7 @@ public class TwoPlayerGame {
     private Cell[][] cells;
     private char whoseTurn = 'X';
     private Frame frame;
-    private char mode = 'T';
+    private final char mode = 'T';
 
     /**
      * Constructor.

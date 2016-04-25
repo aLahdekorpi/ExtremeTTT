@@ -69,25 +69,37 @@ public class MyMouseListener extends MouseAdapter {
             swapTurnsAndSetLabel();
         }
     }
-    public boolean playAgain(){
+    public boolean playAgain() {
         return true;
     }
-    public void newGame(){
+    /**
+     * Starts a new Game.
+     */
+    public void newGame() {
         this.game = new TwoPlayerGame();
     }
-    public void gameIsWonAfterClicked(){
+    /**
+     * Declares winner, sets whoseTurn to ' ', disposes frame, starts a new game.
+     */
+    public void gameIsWonAfterClicked() {
         this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
         this.whoseTurn = ' ';
         this.game.getFrame().dispose();
         newGame();
     }
-    public void gameIsFullAfterClicked(){
+    /**
+     * Declares tie, sets whoseTurn to ' ', disposes frame, starts a new game.
+     */
+    public void gameIsFullAfterClicked() {
         this.game.getFrame().jlblStatus.setText("tie!");
-            this.whoseTurn = ' ';
-            this.game.getFrame().dispose();
-            newGame();
+        this.whoseTurn = ' ';
+        this.game.getFrame().dispose();
+        newGame();
     }
-    public void swapTurnsAndSetLabel(){
+    /**
+     * Swaps turns, sets whoseTurn to correct char, sets jlbl text to whose turn is it.
+     */
+    public void swapTurnsAndSetLabel() {
         this.game.swapTurns();
         this.whoseTurn = this.game.getWhoseTurn();
         this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");

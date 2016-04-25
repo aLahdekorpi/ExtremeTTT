@@ -15,16 +15,15 @@ import java.awt.event.MouseEvent;
  */
 public class SinglePlayerMouseListener extends MyMouseListener {
 
+    private Cell cell;
+
     public SinglePlayerMouseListener(TwoPlayerGame game, Cell cell) {
         super(game, cell);
     }
+
     @Override
-    public void mouseClicked(MouseEvent e){
-        
+    public void mouseClicked(MouseEvent e) {
+
     }
 
-    
-    
-    
-    
 }

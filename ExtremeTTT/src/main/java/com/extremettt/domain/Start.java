@@ -8,6 +8,7 @@ package com.extremettt.domain;
 import com.extremettt.logic.SinglePlayerGame;
 import com.extremettt.logic.TwoPlayerGame;
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 /**
  * Class to start the game.
@@ -15,10 +16,13 @@ import java.util.Scanner;
  * 
  */
 public class Start {
+    private JFrame startFrame;
     /**
      * Constructor, no functions, no parameters.
      */
     public Start(){
+        this.startFrame = new JFrame();
+        initializeStartFrame();
     }
     /**
      * Starts a game depending on parameter.
@@ -59,5 +63,13 @@ public class Start {
             }
         }
         return "Well something went wrong";
+    }
+    
+    public void initializeStartFrame(){
+        this.startFrame.setTitle("ExtremeTTT Start!");
+        this.startFrame.setSize(600, 600);
+        this.startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.startFrame.setLocationRelativeTo(null);
+        this.startFrame.setVisible(true);
     }
 }

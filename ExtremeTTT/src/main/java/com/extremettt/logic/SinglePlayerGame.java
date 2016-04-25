@@ -17,7 +17,7 @@ public class SinglePlayerGame extends TwoPlayerGame {
     private char whoseTurn = 'X';
     private Frame frame;
     private Cell[][] cells;
-    private char mode = 'S';
+    private final char mode = 'S';
     /**
      * Constructor.
      */
