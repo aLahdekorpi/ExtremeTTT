@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.extremettt.gui;
+package com.extremettt.logic;
 
 import com.extremettt.gui.Cell;
-import com.extremettt.gui.MyMouseListener;
+import com.extremettt.gui.Cell;
 import com.extremettt.logic.TwoPlayerGame;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

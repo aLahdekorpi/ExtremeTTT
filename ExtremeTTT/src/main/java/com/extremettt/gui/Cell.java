@@ -5,6 +5,8 @@
  */
 package com.extremettt.gui;
 
+import com.extremettt.logic.MyMouseListener;
+import com.extremettt.logic.SinglePlayerMouseListener;
 import com.extremettt.logic.TwoPlayerGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;

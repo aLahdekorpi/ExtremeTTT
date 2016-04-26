@@ -15,3 +15,4 @@ Päivä | Tunnit | Kuvaus
 20.4.2016 | 1h | MML jlbl(toimii)
 21.4.2016 | 2h | Sekvenssikaavio TPG, Luokkakaavion päivitys, ReadMe
 25.4.2016 | 2h | SinglePlayer aloitus
+26.4.2016 | 3h | SinglePlayer jatkuu

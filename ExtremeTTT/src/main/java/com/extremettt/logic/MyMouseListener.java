@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.extremettt.gui;
+package com.extremettt.logic;
 
-import com.extremettt.logic.TwoPlayerGame;
-import java.awt.BorderLayout;
-import java.awt.Color;
+import com.extremettt.gui.Cell;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JLabel;
-import javax.swing.border.LineBorder;
-
+import com.extremettt.gui.Frame;
 /**
  * Mouse Listener, what to do when clicking mouse.
  *

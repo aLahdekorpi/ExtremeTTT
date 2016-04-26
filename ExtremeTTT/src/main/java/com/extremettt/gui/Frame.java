@@ -18,7 +18,7 @@ public class Frame extends JFrame {
 
     private Cell[][] cells = new Cell[3][3];
     private TwoPlayerGame game;
-    JLabel jlblStatus = new JLabel("X's turn to play");
+    public JLabel jlblStatus = new JLabel("X's turn to play");
     private char whoseTurn = 'X';
     /**
      * Constructor, also uses method initializeFrame.
