@@ -9,7 +9,7 @@ import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
 
 /**
- * Class contains the logic for a singleplayer game.
+ * Class contains the logic for a single player game.
  * @author lalex
  */
 public class SinglePlayerGame extends TwoPlayerGame {
@@ -19,7 +19,7 @@ public class SinglePlayerGame extends TwoPlayerGame {
     private Cell[][] cells;
     private final char mode = 'S';
     /**
-     * Constructor.
+     * Constructor, same as parent's constructor.
      */
     public SinglePlayerGame() {
         this.frame = new Frame(SinglePlayerGame.this);
@@ -28,6 +28,7 @@ public class SinglePlayerGame extends TwoPlayerGame {
 
     }
 
+    @Override
     public char getMode() {
         return mode;
     }

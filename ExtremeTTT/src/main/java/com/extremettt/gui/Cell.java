@@ -5,7 +5,6 @@
  */
 package com.extremettt.gui;
 
-import com.extremettt.logic.SinglePlayerMouseListener;
 import com.extremettt.logic.TwoPlayerGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -18,6 +17,10 @@ import java.awt.*;
 public class Cell extends JPanel {
     private TwoPlayerGame game;
     private char token = ' ';
+    private int posX;
+    private int posY;
+
+    
     /**
      * Constructor, sets border and adds new MouseListener.
      * @param game Game to which this cell is attached to.
@@ -62,5 +65,20 @@ public class Cell extends JPanel {
         } else {
             addMouseListener(new SinglePlayerMouseListener(game, Cell.this));
         }
+    }
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
     }
 }

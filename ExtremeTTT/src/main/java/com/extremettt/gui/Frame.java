@@ -66,7 +66,10 @@ public class Frame extends JFrame {
         JPanel panel = new JPanel(new GridLayout(3, 3, 0, 0));
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                panel.add(cells[i][j] = new Cell(game));
+                Cell cell = new Cell(game);
+                cell.setPosX(i);
+                cell.setPosY(j);
+                panel.add(cells[i][j] = cell);
             }
         }
         return panel;

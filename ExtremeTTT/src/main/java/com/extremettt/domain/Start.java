@@ -21,8 +21,8 @@ public class Start {
      * Constructor, no functions, no parameters.
      */
     public Start(){
-        this.startFrame = new JFrame();
-        initializeStartFrame();
+        //this.startFrame = new JFrame();
+        //initializeStartFrame();
     }
     /**
      * Starts a game depending on parameter.

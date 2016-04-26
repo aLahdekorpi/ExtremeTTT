@@ -24,7 +24,6 @@ public class MyMouseListener extends MouseAdapter {
     private char whoseTurn;
     private char token;
     private Cell cell;
-    private JLabel jlbl;
 
     /**
      * Constructor.
@@ -55,6 +54,7 @@ public class MyMouseListener extends MouseAdapter {
         //if cell doesn't have a token and its someones turn, sets token to cell
         if (this.cell.getToken() == ' ' && this.whoseTurn != ' ') {
             this.cell.setToken(whoseTurn);
+            nextTurn();
         }
 
         //if game is won, declare winner
@@ -66,7 +66,7 @@ public class MyMouseListener extends MouseAdapter {
         }
         //if game is not won nor full, swap turns and print whose turn it is
         if (!this.game.isWon() && !this.game.isFull()) {
-            swapTurnsAndSetLabel();
+            //nextTurn();
         }
     }
     public boolean playAgain() {
@@ -99,7 +99,7 @@ public class MyMouseListener extends MouseAdapter {
     /**
      * Swaps turns, sets whoseTurn to correct char, sets jlbl text to whose turn is it.
      */
-    public void swapTurnsAndSetLabel() {
+    public void nextTurn() {
         this.game.swapTurns();
         this.whoseTurn = this.game.getWhoseTurn();
         this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");
