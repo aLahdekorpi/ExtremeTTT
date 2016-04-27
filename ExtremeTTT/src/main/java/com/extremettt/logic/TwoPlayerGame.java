@@ -20,10 +20,11 @@ public class TwoPlayerGame {
     private char whoseTurn = 'X';
     private Frame frame;
     private final char mode = 'T';
+    private int winsX;
+    private int winsO;
 
     /**
-     * Constructor.
-     * Creates new Frame, uses method initializeGameFrame.
+     * Constructor. Creates new Frame, uses method initializeGameFrame.
      */
     public TwoPlayerGame() {
         this.frame = new Frame(TwoPlayerGame.this);
@@ -152,6 +153,7 @@ public class TwoPlayerGame {
 
     /**
      * Setter for whoseTurn.
+     *
      * @param whoseTurn Should be O or X for method to work.
      */
     public void setWhoseTurn(char whoseTurn) {
@@ -162,6 +164,7 @@ public class TwoPlayerGame {
 
     /**
      * Getter.
+     *
      * @return whoseTurn
      */
     public char getWhoseTurn() {
@@ -178,7 +181,34 @@ public class TwoPlayerGame {
             setWhoseTurn('X');
         }
     }
+
     public char getMode() {
         return mode;
     }
+
+    public void nullifyGameBoard() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                this.cells[i][j].nullifyCell();
+            }
+        }
+    }
+
+    public void addPointToWinner() {
+        if (this.whoseTurn == 'X') {
+            this.winsX++;
+        }
+        if (this.whoseTurn == 'O') {
+            this.winsO++;
+        }
+    }
+
+    public int getWinsX() {
+        return winsX;
+    }
+
+    public int getWinsO() {
+        return winsO;
+    }
+
 }

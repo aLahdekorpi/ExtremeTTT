@@ -5,8 +5,6 @@
  */
 package com.extremettt.gui;
 
-import com.extremettt.logic.MyMouseListener;
-import com.extremettt.logic.SinglePlayerMouseListener;
 import com.extremettt.logic.TwoPlayerGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -14,17 +12,17 @@ import java.awt.*;
 
 /**
  * Panel which holds the Cells.
+ *
  * @author lalex
  */
 public class Cell extends JPanel {
+
     private TwoPlayerGame game;
     private char token = ' ';
-    private int posX;
-    private int posY;
 
-    
     /**
      * Constructor, sets border and adds new MouseListener.
+     *
      * @param game Game to which this cell is attached to.
      */
     public Cell(TwoPlayerGame game) {
@@ -36,8 +34,10 @@ public class Cell extends JPanel {
     public char getToken() {
         return token;
     }
+
     /**
      * Setter for token.
+     *
      * @param token needs to be X or O to work, token must also be empty before
      */
     public void setToken(char token) {
@@ -46,8 +46,10 @@ public class Cell extends JPanel {
             repaint();
         }
     }
+
     /**
-     * Draws token to the cell. 
+     * Draws token to the cell.
+     *
      * @param g graphics
      */
     @Override
@@ -61,26 +63,17 @@ public class Cell extends JPanel {
             g.drawOval(10, 10, getWidth() - 20, getHeight() - 20);
         }
     }
-    public void addSingleOrDoubleMouseListener(){
-        if (this.game.getMode()=='T'){
+
+    public void addSingleOrDoubleMouseListener() {
+        if (this.game.getMode() == 'T') {
             addMouseListener(new MyMouseListener(game, Cell.this));
         } else {
             addMouseListener(new SinglePlayerMouseListener(game, Cell.this));
         }
     }
-    public void setPosX(int posX) {
-        this.posX = posX;
-    }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
-    }
-
-    public int getPosX() {
-        return posX;
-    }
-
-    public int getPosY() {
-        return posY;
+    public void nullifyCell() {
+        this.token = ' ';
+        repaint();
     }
 }

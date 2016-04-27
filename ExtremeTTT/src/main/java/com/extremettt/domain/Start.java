@@ -5,34 +5,49 @@
  */
 package com.extremettt.domain;
 
+import com.extremettt.gui.StartFrame;
 import com.extremettt.logic.SinglePlayerGame;
 import com.extremettt.logic.TwoPlayerGame;
+import static com.sun.javafx.fxml.expression.Expression.add;
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.util.Scanner;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.border.LineBorder;
 
 /**
  * Class to start the game.
+ *
  * @author lalex
- * 
+ *
  */
 public class Start {
-    private JFrame startFrame;
+
+    private StartFrame startFrame;
+
     /**
-     * Constructor, no functions, no parameters.
+     * Constructor, no parameters.
      */
-    public Start(){
-        //this.startFrame = new JFrame();
-        //initializeStartFrame();
+    public Start() {
+        this.startFrame = new StartFrame(Start.this);
+        initializeStartFrame();
+
     }
+
+    public StartFrame getStartFrame() {
+        return startFrame;
+    }
+
     /**
      * Starts a game depending on parameter.
      * <p>
-     * prints "Single decided" if parameter is "S",
-     * prints "Two decided" if parameter is "T",
-     * prints "Problem in parameter, if not "T" or "S".
+     * prints "Single decided" if parameter is "S", prints "Two decided" if
+     * parameter is "T", prints "Problem in parameter, if not "T" or "S".
      * </p>
+     *
      * @param s String, should be "S" or "T"
-     */ 
+     */
     public void startGame(String s) {
         if (s.equals("S")) {
             System.out.print("Single decided");
@@ -44,8 +59,10 @@ public class Start {
             System.out.print("Problem in parameter");
         }
     }
+
     /**
      * asks user if single or two.
+     *
      * @return "S" or "T"
      */
     public String singleOrTwo() {
@@ -64,12 +81,16 @@ public class Start {
         }
         return "Well something went wrong";
     }
-    
-    public void initializeStartFrame(){
+
+    public void initializeStartFrame() {
         this.startFrame.setTitle("ExtremeTTT Start!");
         this.startFrame.setSize(600, 600);
         this.startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.startFrame.createButtonSingle();
+        this.startFrame.createButtonTwo();
         this.startFrame.setLocationRelativeTo(null);
         this.startFrame.setVisible(true);
+
     }
+
 }

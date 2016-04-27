@@ -43,12 +43,10 @@
                 <configuration>
                     <targetClasses>
                         <param>com.extremettt.logic.*</param>
-                        <param>com.extremettt.gui.*</param>
                         <param>com.extremettt.domain.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>com.extremettt.logic.*</param>
-                        <param>com.extremettt.gui.*</param>
                         <param>com.extremettt.domain.*</param>
                     </targetTests>
                 </configuration>

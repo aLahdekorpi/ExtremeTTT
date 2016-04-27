@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.extremettt.logic;
+package com.extremettt.gui;
 
-import com.extremettt.gui.Cell;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import com.extremettt.gui.Frame;
+import com.extremettt.logic.TwoPlayerGame;
+
 /**
  * Mouse Listener, what to do when clicking mouse.
  *
@@ -41,59 +41,64 @@ public class MyMouseListener extends MouseAdapter {
      */
     @Override
     public void mouseClicked(MouseEvent e) {
+        if (this.cell.getToken() != ' ') {
+            return;
+        }
         this.whoseTurn = this.game.getWhoseTurn();
         //checks if game is full or won before setting any tokens
         if (this.game.isFull() || this.game.isWon()) {
-            this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game is already over");
+            this.game.getFrame().jlblStatus.setText("Game is already over");
             return;
         }
         //if cell doesn't have a token and its someones turn, sets token to cell
         if (this.cell.getToken() == ' ' && this.whoseTurn != ' ') {
             this.cell.setToken(whoseTurn);
-            nextTurn();
+            //nextTurn();
         }
 
         //if game is won, declare winner
         if (this.game.isWon()) {
             gameIsWonAfterClicked();
             //if game is full, but game is not won, declare tie 
-        } else if (this.game.isFull()) {
+        }
+        if (this.game.isFull() && !this.game.isWon()) {
             gameIsFullAfterClicked();
         }
         //if game is not won nor full, swap turns and print whose turn it is
         if (!this.game.isWon() && !this.game.isFull()) {
-            //nextTurn();
+            nextTurn();
         }
+        this.game.getFrame().score.setText("X: " + this.game.getWinsX() + " O: " + this.game.getWinsO());
     }
-    public boolean playAgain() {
-        return true;
-    }
+
     /**
      * Starts a new Game.
      */
     public void newGame() {
-        this.game = new TwoPlayerGame();
+        this.game.nullifyGameBoard();
     }
+
     /**
-     * Declares winner, sets whoseTurn to ' ', disposes frame, starts a new game.
+     * Declares winner, sets whoseTurn to ' ', disposes frame, starts a new
+     * game.
      */
     public void gameIsWonAfterClicked() {
-        this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
-        this.whoseTurn = ' ';
-        this.game.getFrame().dispose();
+        this.game.addPointToWinner();
         newGame();
+        this.game.getFrame().jlblStatus.setText(this.whoseTurn + " won, game over");
     }
+
     /**
      * Declares tie, sets whoseTurn to ' ', disposes frame, starts a new game.
      */
     public void gameIsFullAfterClicked() {
         this.game.getFrame().jlblStatus.setText("tie!");
-        this.whoseTurn = ' ';
-        this.game.getFrame().dispose();
         newGame();
     }
+
     /**
-     * Swaps turns, sets whoseTurn to correct char, sets jlbl text to whose turn is it.
+     * Swaps turns, sets whoseTurn to correct char, sets jlbl text to whose turn
+     * is it.
      */
     public void nextTurn() {
         this.game.swapTurns();
