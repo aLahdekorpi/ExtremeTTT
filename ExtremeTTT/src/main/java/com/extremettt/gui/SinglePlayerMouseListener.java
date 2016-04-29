@@ -6,6 +6,7 @@
 package com.extremettt.gui;
 
 import com.extremettt.logic.TwoPlayerGame;
+import com.extremettt.logic.WinChecker;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
@@ -17,6 +18,7 @@ import java.util.Random;
  */
 public class SinglePlayerMouseListener extends MouseAdapter {
 
+    private WinChecker winC;
     private Random rand;
     private Cell cell;
     private TwoPlayerGame game;
@@ -27,7 +29,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
     private boolean isClicked;
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param game SinglePlayerGame
      * @param cell Cell
@@ -38,6 +40,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
         this.token = this.cell.getToken();
         this.rand = new Random();
         this.whoseTurn = this.game.getWhoseTurn();
+        this.winC = new WinChecker(game);
 
     }
 
@@ -49,13 +52,13 @@ public class SinglePlayerMouseListener extends MouseAdapter {
     /**
      * Play a turn.
      */
-    public void playTurn() {;
+    public void playTurn() {
         this.game.setWhoseTurn('X');
         if (this.cell.getToken() != ' ') {
             return;
         }
         //if game is full or won, declare winner.
-        if (this.game.isFull() || this.game.isWon()) {
+        if (this.game.isFull() || this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Game is already over");
             return;
         }
@@ -65,13 +68,13 @@ public class SinglePlayerMouseListener extends MouseAdapter {
             this.game.getFrame().jlblStatus.setText(this.whoseTurn + "'s turn");
         }
         //if game is won, declare winner
-        if (this.game.isWon()) {
+        if (this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("You won, gg.");
             this.game.addPointToWinner();
             newGame();
             // if game is full and not won, declare tie
         }
-        if (this.game.isFull() && !this.game.isWon()) {
+        if (this.game.isFull() && !this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Tie, gf.");
             newGame();
         } else {
@@ -87,12 +90,12 @@ public class SinglePlayerMouseListener extends MouseAdapter {
         this.game.setWhoseTurn('O');
         paintRandomCellWithO();
         // if game is won, declare winner
-        if (this.game.isWon()) {
+        if (this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Computer won, gg.");
             this.game.addPointToWinner();
             newGame();
             // if game is full and not won, declare tie
-        } else if (this.game.isFull() && !this.game.isWon()) {
+        } else if (this.game.isFull() && !this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Tie, gf.");
             newGame();
         }
@@ -116,6 +119,9 @@ public class SinglePlayerMouseListener extends MouseAdapter {
         }
     }
 
+    /**
+     * Clears the board from tokens.
+     */
     public void newGame() {
         this.game.nullifyGameBoard();
     }

@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
+ * Button listener, what to do when buttons are pressed.
  *
  * @author lalex
  */
@@ -19,6 +20,11 @@ public class ButtonListener implements ActionListener {
     private Start start;
     private JButton b;
 
+    /**
+     * Constructor.
+     *
+     * @param start Start, where this ButtonListener is created.
+     */
     public ButtonListener(Start start) {
         this.start = start;
     }

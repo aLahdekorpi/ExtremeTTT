@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.border.LineBorder;
 
 /**
+ * Frame for starting a game.
  *
  * @author lalex
  */
@@ -23,10 +24,18 @@ public class StartFrame extends JFrame {
 
     private Start start;
 
+    /**
+     * Constructor.
+     *
+     * @param start Start
+     */
     public StartFrame(Start start) {
         this.start = start;
     }
 
+    /**
+     * Creates a Single Player button.
+     */
     public void createButtonSingle() {
         JButton single = new JButton("Single Player");
         single.setBorder(new LineBorder(Color.yellow, 1));
@@ -35,6 +44,9 @@ public class StartFrame extends JFrame {
         add(single, BorderLayout.LINE_START);
     }
 
+    /**
+     * Creates a Two Players button.
+     */
     public void createButtonTwo() {
         JButton two = new JButton("Two Players");
         two.setBorder(new LineBorder(Color.yellow, 1));

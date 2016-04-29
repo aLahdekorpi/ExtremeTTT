@@ -1,5 +1,6 @@
 com/extremettt/gui/Frame.class
 com/extremettt/domain/Start.class
+com/extremettt/logic/WinChecker.class
 com/extremettt/logic/TwoPlayerGame.class
 com/extremettt/gui/MyMouseListener.class
 com/extremettt/gui/ButtonListener.class

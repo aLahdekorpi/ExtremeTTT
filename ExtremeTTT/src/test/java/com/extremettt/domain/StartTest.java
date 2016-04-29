@@ -16,33 +16,36 @@ import static org.junit.Assert.*;
 
 /**
  * Test class for class Start.
+ *
  * @author lalex
  */
 public class StartTest {
+
     private final ByteArrayOutputStream outPut = new ByteArrayOutputStream();
     Start start;
+
     public StartTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         System.setOut(new PrintStream(outPut));
         start = new Start();
     }
-    
+
     @After
     public void tearDown() {
         System.setOut(null);
     }
-    
+
     @Test
     public void startGameWorksWithS() {
         start.startGame("S");

@@ -61,7 +61,7 @@ public class Start {
     }
 
     /**
-     * asks user if single or two.
+     * Asks user if single or two.
      *
      * @return "S" or "T"
      */
@@ -82,6 +82,15 @@ public class Start {
         return "Well something went wrong";
     }
 
+    /**
+     * Initializes the StartFrame.
+     * <p>
+     * Sets title, size, default close operation (Exit on close), location and
+     * visible to startFrame Creates two buttons through methods
+     * createButtonSingle, createButtonTwo.
+     * </p>
+     *
+     */
     public void initializeStartFrame() {
         this.startFrame.setTitle("ExtremeTTT Start!");
         this.startFrame.setSize(600, 600);

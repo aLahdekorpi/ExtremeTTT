@@ -8,6 +8,7 @@ package com.extremettt.gui;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import com.extremettt.logic.TwoPlayerGame;
+import com.extremettt.logic.WinChecker;
 
 /**
  * Mouse Listener, what to do when clicking mouse.
@@ -20,6 +21,7 @@ public class MyMouseListener extends MouseAdapter {
     private char whoseTurn;
     private char token;
     private Cell cell;
+    private WinChecker winC;
 
     /**
      * Constructor.
@@ -32,6 +34,7 @@ public class MyMouseListener extends MouseAdapter {
         this.cell = cell;
         this.token = cell.getToken();
         this.whoseTurn = game.getWhoseTurn();
+        this.winC = new WinChecker(game);
     }
 
     /**
@@ -46,7 +49,7 @@ public class MyMouseListener extends MouseAdapter {
         }
         this.whoseTurn = this.game.getWhoseTurn();
         //checks if game is full or won before setting any tokens
-        if (this.game.isFull() || this.game.isWon()) {
+        if (this.game.isFull() || this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Game is already over");
             return;
         }
@@ -57,15 +60,15 @@ public class MyMouseListener extends MouseAdapter {
         }
 
         //if game is won, declare winner
-        if (this.game.isWon()) {
+        if (this.winC.isWon()) {
             gameIsWonAfterClicked();
             //if game is full, but game is not won, declare tie 
         }
-        if (this.game.isFull() && !this.game.isWon()) {
+        if (this.game.isFull() && !this.winC.isWon()) {
             gameIsFullAfterClicked();
         }
         //if game is not won nor full, swap turns and print whose turn it is
-        if (!this.game.isWon() && !this.game.isFull()) {
+        if (!this.winC.isWon() && !this.game.isFull()) {
             nextTurn();
         }
         this.game.getFrame().score.setText("X: " + this.game.getWinsX() + " O: " + this.game.getWinsO());

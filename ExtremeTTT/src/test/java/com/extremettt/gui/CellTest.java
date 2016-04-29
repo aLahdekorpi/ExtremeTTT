@@ -16,12 +16,14 @@ import static org.junit.Assert.*;
 
 /**
  * Test class for class Cell.
+ *
  * @author lalex
  */
 public class CellTest {
 
     private Cell cell;
     private TwoPlayerGame game;
+
     public CellTest() {
     }
 
@@ -52,18 +54,20 @@ public class CellTest {
         cell.setToken('!');
         cell.setToken('5');
         assertEquals(cell.getToken(), 'O');
-        
+
     }
+
     @Test
-    public void setterWorksWithRightParameter(){
+    public void setterWorksWithRightParameter() {
         cell.setToken('X');
         cell.setToken('x');
         cell.setToken('o');
         cell.setToken('!');
         assertEquals(cell.getToken(), 'X');
     }
+
     @Test
-    public void setterWorksIfTokenAlready(){
+    public void setterWorksIfTokenAlready() {
         cell.setToken('X');
         cell.setToken('O');
         cell.setToken('O');

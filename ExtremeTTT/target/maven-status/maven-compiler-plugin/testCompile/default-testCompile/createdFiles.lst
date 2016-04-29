@@ -1,3 +1,4 @@
 com/extremettt/domain/StartTest.class
+com/extremettt/logic/WinCheckerTest.class
 com/extremettt/gui/CellTest.class
 com/extremettt/logic/TwoPlayerGameTest.class

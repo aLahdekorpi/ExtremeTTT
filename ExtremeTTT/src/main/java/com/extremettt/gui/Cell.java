@@ -64,6 +64,10 @@ public class Cell extends JPanel {
         }
     }
 
+    /**
+     * Adds mouse listener to cell. If game mode is "T" adds MyMouseListener,
+     * else adds SinglePlayerMouseListener.
+     */
     public void addSingleOrDoubleMouseListener() {
         if (this.game.getMode() == 'T') {
             addMouseListener(new MyMouseListener(game, Cell.this));
@@ -72,6 +76,9 @@ public class Cell extends JPanel {
         }
     }
 
+    /**
+     * Empties the cell. Used when game is won and board needs to be cleared.
+     */
     public void nullifyCell() {
         this.token = ' ';
         repaint();

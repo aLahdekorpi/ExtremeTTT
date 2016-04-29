@@ -12,7 +12,7 @@ public class Main {
     /**
      * Main, creates new Start and starts a game through class Start.
      *
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
         Start start = new Start();
