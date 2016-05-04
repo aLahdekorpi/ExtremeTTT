@@ -46,22 +46,6 @@ public class TwoPlayerGame {
         this.frame.setVisible(true);
     }
 
-    /**
-     * Checks is gameboard is full.
-     *
-     * @return true if full, false if not.
-     */
-    public boolean isFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (this.cells[i][j].getToken() == ' ') {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
     public Cell[][] getCells() {
         return this.cells;
     }
@@ -103,17 +87,6 @@ public class TwoPlayerGame {
 
     public char getMode() {
         return mode;
-    }
-
-    /**
-     * Clears token from every cell on board.
-     */
-    public void nullifyGameBoard() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                this.cells[i][j].nullifyCell();
-            }
-        }
     }
 
     /**

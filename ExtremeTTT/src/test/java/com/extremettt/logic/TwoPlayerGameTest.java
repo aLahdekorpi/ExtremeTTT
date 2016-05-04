@@ -47,68 +47,6 @@ public class TwoPlayerGameTest {
     }
 
     @Test
-    public void isFullTrueWhenFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                this.cells[i][j].setToken('X');
-            }
-        }
-        if (this.cells[0][0].getToken() == ' '
-                || this.cells[0][1].getToken() == ' '
-                || this.cells[0][2].getToken() == ' '
-                || this.cells[1][0].getToken() == ' '
-                || this.cells[1][1].getToken() == ' '
-                || this.cells[1][2].getToken() == ' '
-                || this.cells[2][0].getToken() == ' '
-                || this.cells[2][1].getToken() == ' '
-                || this.cells[2][2].getToken() == ' ') {
-            fail();
-        }
-        assertTrue(game.isFull());
-    }
-
-    @Test
-    public void isFullFalseWhenEmpty() {
-        assertFalse(game.isFull());
-    }
-
-    @Test
-    public void isFullWorksFalseThreeTokens() {
-        this.cells[0][0].setToken('X');
-        this.cells[0][1].setToken('O');
-        this.cells[0][2].setToken('X');
-        assertFalse(game.isFull());
-    }
-
-    @Test
-    public void isFullFalseOneToken() {
-        this.cells[0][0].setToken('O');
-        assertFalse(game.isFull());
-    }
-
-    @Test
-    public void isFullFalseEightTokens() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 2; j++) {
-                this.cells[i][j].setToken('O');
-            }
-        }
-        assertFalse(game.isFull());
-    }
-
-
-
-    @Test
-    public void isFullFalseWhenWrongParameter() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                this.cells[i][j].setToken('K');
-            }
-        }
-        assertFalse(game.isFull());
-    }
-
-    @Test
     public void whoseTurnIsCorrectAtStart() {
         assertEquals(game.getWhoseTurn(), 'X');
     }

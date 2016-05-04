@@ -5,6 +5,8 @@
  */
 package com.extremettt.gui;
 
+import com.extremettt.logic.BoardSweeper;
+import com.extremettt.logic.FullChecker;
 import com.extremettt.logic.TwoPlayerGame;
 import com.extremettt.logic.WinChecker;
 import java.awt.event.MouseAdapter;
@@ -19,6 +21,7 @@ import java.util.Random;
 public class SinglePlayerMouseListener extends MouseAdapter {
 
     private WinChecker winC;
+    private FullChecker fullC;
     private Random rand;
     private Cell cell;
     private TwoPlayerGame game;
@@ -27,6 +30,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
     private int winsX;
     private int winsO;
     private boolean isClicked;
+    private BoardSweeper sweeper;
 
     /**
      * Constructor.
@@ -36,11 +40,13 @@ public class SinglePlayerMouseListener extends MouseAdapter {
      */
     public SinglePlayerMouseListener(TwoPlayerGame game, Cell cell) {
         this.game = game;
+        this.fullC = new FullChecker(game);
         this.cell = cell;
         this.token = this.cell.getToken();
         this.rand = new Random();
         this.whoseTurn = this.game.getWhoseTurn();
         this.winC = new WinChecker(game);
+        this.sweeper = new BoardSweeper(game);
 
     }
 
@@ -58,7 +64,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
             return;
         }
         //if game is full or won, declare winner.
-        if (this.game.isFull() || this.winC.isWon()) {
+        if (this.fullC.isFull() || this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Game is already over");
             return;
         }
@@ -74,7 +80,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
             newGame();
             // if game is full and not won, declare tie
         }
-        if (this.game.isFull() && !this.winC.isWon()) {
+        if (this.fullC.isFull() && !this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Tie, gf.");
             newGame();
         } else {
@@ -95,7 +101,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
             this.game.addPointToWinner();
             newGame();
             // if game is full and not won, declare tie
-        } else if (this.game.isFull() && !this.winC.isWon()) {
+        } else if (this.fullC.isFull() && !this.winC.isWon()) {
             this.game.getFrame().jlblStatus.setText("Tie, gf.");
             newGame();
         }
@@ -123,7 +129,7 @@ public class SinglePlayerMouseListener extends MouseAdapter {
      * Clears the board from tokens.
      */
     public void newGame() {
-        this.game.nullifyGameBoard();
+        this.sweeper.nullifyGameBoard();
     }
 
     /**

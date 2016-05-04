@@ -1,4 +1,7 @@
-com/extremettt/domain/StartTest.class
 com/extremettt/logic/WinCheckerTest.class
 com/extremettt/gui/CellTest.class
+com/extremettt/logic/SinglePlayerGameTest.class
+com/extremettt/domain/StartTest.class
+com/extremettt/logic/FullCheckerTest.class
+com/extremettt/logic/BoardSweeperTest.class
 com/extremettt/logic/TwoPlayerGameTest.class
