@@ -18,3 +18,5 @@ Päivä | Tunnit | Kuvaus
 26.4.2016 | 3h | SinglePlayer jatkuu
 27.4.2016 | 2h | SinglePLayer valmis
 29.4.2016 | 5h | WinChecker+testit, Sekvenssikaavio SP, käyttöohje, rakennekuvaus, luokkakaaviot, jar. 
+05.5.2016 | 2h | Loput testit, FullChecker, BoardChecker
+06.5.2016 | 2h | Uudet raportit, kaavioiden päivitykset.

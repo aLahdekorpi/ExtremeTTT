@@ -8,7 +8,7 @@ Ohjelma ExtremeTTT on ristinolla-peli, jossa voi pelata kaksinpeliä, tai extrem
 
 [CheckStyle](https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/checkstyle.html)
 
-[Pit](https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/pit/201604291435/index.html)
+[Pit](https://htmlpreview.github.io/?https://github.com/aLahdekorpi/ExtremeTTT/blob/master/Dokumentaatio/pit/201605061051/index.html)
 
 ###Käyttöohje
 1. Aja jar tiedosto.

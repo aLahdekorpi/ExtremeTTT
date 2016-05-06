@@ -90,6 +90,30 @@ public class TwoPlayerGameTest {
 
     }
 
+    @Test
+    public void addPointAddsOneToX() {
+        game.setWhoseTurn('X');
+        game.addPointToWinner();
+        assertEquals(game.getWinsX(), 1);
+    }
+
+    @Test
+    public void addPointAddsOneToO() {
+        game.setWhoseTurn('O');
+        game.addPointToWinner();
+        assertEquals(game.getWinsO(), 1);
+    }
+
+    @Test
+    public void addPointAddsOneToBoth() {
+        game.setWhoseTurn('O');
+        game.addPointToWinner();
+        game.setWhoseTurn('X');
+        game.addPointToWinner();
+        assertEquals(game.getWinsO(), 1);
+        assertEquals(game.getWinsX(), 1);
+    }
+
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

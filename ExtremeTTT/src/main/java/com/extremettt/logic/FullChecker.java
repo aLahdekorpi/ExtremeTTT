@@ -9,6 +9,7 @@ import com.extremettt.gui.Cell;
 import com.extremettt.gui.Frame;
 
 /**
+ * Class to check if gameboard is full.
  *
  * @author lalex
  */
@@ -17,7 +18,10 @@ public class FullChecker {
     private TwoPlayerGame game;
     private char whoseTurn = 'X';
     private Frame frame;
-
+    /** 
+     * Constructor.
+     * @param game TwoPlayerGame
+     */
     public FullChecker(TwoPlayerGame game) {
         this.game = game;
         this.frame = game.getFrame();

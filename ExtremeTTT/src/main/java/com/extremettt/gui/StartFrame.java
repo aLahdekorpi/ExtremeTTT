@@ -5,7 +5,7 @@
  */
 package com.extremettt.gui;
 
-import com.extremettt.domain.Start;
+import com.extremettt.start.Start;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;

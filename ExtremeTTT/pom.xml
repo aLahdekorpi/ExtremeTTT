@@ -49,7 +49,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.extremettt.domain.Main</mainClass>
+                                    <mainClass>com.extremettt.start.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -63,11 +63,11 @@
                 <configuration>
                     <targetClasses>
                         <param>com.extremettt.logic.*</param>
-                        <param>com.extremettt.domain.*</param>
+                        <param>com.extremettt.start.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>com.extremettt.logic.*</param>
-                        <param>com.extremettt.domain.*</param>
+                        <param>com.extremettt.start.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

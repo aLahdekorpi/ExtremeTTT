@@ -6,11 +6,17 @@
 package com.extremettt.logic;
 
 /**
+ * Class to clear a gameboard.
  *
  * @author lalex
  */
 public class BoardSweeper {
+
     private TwoPlayerGame game;
+    /**
+     * Constructor.
+     * @param game TwoPlayerGame 
+     */
     public BoardSweeper(TwoPlayerGame game) {
         this.game = game;
     }

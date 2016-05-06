@@ -1,4 +1,7 @@
 /home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/gui/CellTest.java
-/home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/domain/StartTest.java
+/home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/logic/BoardSweeperTest.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/logic/TwoPlayerGameTest.java
+/home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/logic/FullCheckerTest.java
+/home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/logic/SinglePlayerGameTest.java
+/home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/start/StartTest.java
 /home/lalex/ExtremeTTT/ExtremeTTT/src/test/java/com/extremettt/logic/WinCheckerTest.java

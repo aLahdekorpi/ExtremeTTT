@@ -1,13 +1,13 @@
+com/extremettt/start/Main.class
 com/extremettt/gui/Frame.class
-com/extremettt/domain/Start.class
 com/extremettt/logic/TwoPlayerGame.class
 com/extremettt/logic/FullChecker.class
 com/extremettt/gui/SinglePlayerMouseListener.class
 com/extremettt/gui/StartFrame.class
 com/extremettt/logic/WinChecker.class
 com/extremettt/gui/MyMouseListener.class
+com/extremettt/start/Start.class
 com/extremettt/gui/ButtonListener.class
-com/extremettt/domain/Main.class
 com/extremettt/logic/SinglePlayerGame.class
 com/extremettt/logic/BoardSweeper.class
 com/extremettt/gui/Cell.class
